@@ -1,0 +1,9 @@
+proposal: %default
+
+Super, dann folge mir bitte.
+
+^execute(gotoPOI,Neueinschreibung)
+
+proposal: %presentPOI
+	Hier sind wir!
+    %goto_home
