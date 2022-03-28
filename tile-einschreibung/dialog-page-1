@@ -7,4 +7,4 @@ u:(~ja)
 
 u:(~nein)
   Okay
-    %goto_home
+  %goto_home
