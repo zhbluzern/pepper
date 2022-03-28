@@ -6,4 +6,4 @@ Super, dann folge mir bitte.
 
 proposal: %presentPOI
 	Hier sind wir!
-    %goto_home
+	%goto_home
