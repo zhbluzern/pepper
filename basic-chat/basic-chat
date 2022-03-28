@@ -1,0 +1,910 @@
+topic: ~basicchannel ()
+
+u:(hast du eine testfrage)
+	Nein, \pau=300\ da waren meine Entwickler leider zu doooof dafür. \pau=500\ Sorry. Boot \pau=500\ Booot \pau=500\ Boooot.
+
+################################################################################
+############################## ZHB als Ort #####################################
+################################################################################
+
+u:(["Gibt es hier ["Arbeitsräume für Gruppen" Gruppenarbeitsräume Gruppenräume "Räume für Gruppen"]" "["ich möchte" "Wie kann ich"] einen Gruppenarbeitsraum buchen" "wo kann ich {~hier} mit meiner gruppe lernen" "wie {kann} {reserviere} ich einen gruppenraum {reservieren}"])
+	%goto_gruppenarbeitsraeume
+	
+u:(wo sind {hier} {die} [Medien Bücher])
+	Die findest du hier überall. Am besten gehst du zwischen Ausleihtheke und Lesesaal vorbei in das Freihandmagazin. Dort findest du auf vier Stockwerken Bücher und Medien aller Art. Im Untergeschoss findest du sogar besonders alte und wertvolle Bücher. Und im Katalogsaal bei der Ausleihtheke findest du die aktuellsten Zeitschriften oder auch Sonderausstellungen. Das ist aber noch nicht alles. In der Speicherbibliothek in Büron bewahren wir die meisten unserer Bücher auf. Die kannst du ganz einfach via swiss-ckowerii RZS bestellen.
+	^stayInScope
+	
+u:(wo ist ["der freihandbereich" "das freihandmagazin"])
+	Den Durchgang zum Freihandbereich mit dem Büchermagazin und vielen Arbeitsplätzen findest direkt zwischen Ausleihtheke und Lesesaal.
+	^stayInScope
+
+u:([Kann Darf] ich hier [lernen arbeiten recherchieren])
+	Wir haben hier verschiedene Arbeitsplätze für einzelne Persoonen, aber auch Gruppenarbeitsräume. Wenn du einen Laptop brauchst und keinen dabei hast, kannst du einen an der Ausleihtheke leihen.
+	^stayInScope
+
+u:([Kann Darf] ich {hier} einen [Arbeitsplatz Platz] reservieren)
+	Reservieren kannst du nur Gruppenarbeitsräume. Auf unserem Siitnavigator siehst du aber \pau=300\ wo im Moment ein Arbeitsplatz für dich frei wäre.
+	%goto_seat-navigator
+
+u:(["Was ist {der} Seat Navigator" "[Hat Gibt] es {noch} freie [Plätze Arbeitsplätze]"])
+	%goto_seat-navigator
+
+u:(Ist die ~zhb [behindertengerecht "für Rollstuhlfahrer geeignet" barrierefrei rollstullgängig]) 
+	Die ZHB Bibliotheken in der Sempacherstrasse und am Uni und PH-Gebäude sind komplett rollstuhlgängig und verfügen zudem über Lifte und Rampen. \pau=500\ Gerne können Sie auch jederzeit einen Mitarbeitenden an der Theke um Unterstützung bitten.
+    ^stayInScope
+	
+u:(["[kann darf] [ich man] [einen seinen meinen] Hund mit ["in die Bibliothek" rein] nehmen" "darf mein hund mit ["in die bibliothek" rein]" "sind {hier} hunde {hier} {in der bibliothek} erlaubt"])
+	Nein, \pau=300\ der Hund muss leider draussen bleiben. \pau=500\ Ich kann ja solange ein bisschen mit ihm spielen?
+	^stayInScope
+	
+u:(["Wo ["finde ich" ist sind] [das die] [Toiletten WC Klo]" "[gibt hat] es hier {irgendwo} {[eine ein]} [WC Toiletten Toilette Klo]"]) 
+	Die WCs befinden sich im Untergeschoss eine Treppe tiefer sowie auf jeder Etage des Freihandbereichs.
+	^stayInScope
+	
+u:(["Gibt es ~hier {auch} {ein} [Restaurant Bistro kaffee "etwas zu [trinken essen]"]" "Ich habe [Hunger Durst]" "wo kann ich [etwas "einen [Kaffee Tee]"] trinken"])
+	Direkt nebenan befindet sich das ZHB Bistro mit einer Auswahl an köstlichen Speisen und Getränken, \pau=300\ die bei schönem Wetter auch draussen im Lesegarten oder im Vögeligärtli serviert werden.
+	^stayInScope
+	
+u:([Kann Darf] ich hier {auch} {[etwas was]} [essen {und} trinken])
+	An unseren Arbeitsplätzen darfst du gerne etwas trinken. Doch achte bitte darauf, dass du nichts ausleerst. Wenn du es etwas edler möchtest, empfehle ich dir einen Besuch in unserem Bistro.
+	^stayInScope
+
+u:(["Wo ["gibt es" "finde ich"] ["einen Arbeitsplatz" Arbeitsplätze]" "Gibt es hier {irgendwo} {auch} {freie} Arbeitsplätze" "Wo ["gibt es" "finde ich"] einen freien {Arbeits} Platz"	"Ich suche einen {[freien ruhigen]} Platz {zum Lernen}" "Wo kann ich hier {ungestört} lernen"])
+	Unter \pau=300\ rauminfo punkt zhbluzern punkt ch \pau=300\ finden sich alle Arbeits- und Lernplätze aller ZHB Standorte. \pau=500\ Jeder Sitzplatz ist mit einem Sensor ausgestattet, der in Echtzeit anzeigt, ob 	 der Platz noch frei, besetzt oder nur vorübergehend für eine Pause verlassen wurde. \pau=500\ Dementsprechend wird er dir dann als grün, rot oder gelb angezeigt.
+	^stayInScope
+	
+u:(["Wer sind die ~personen auf ["den [Fotos Portraits Bildern]" "der Bildergalerie"] der ~zhb" "Welche ~personen sind auf den {ganzen} Bildern in der ~zhb zu sehen" "Was ist das für eine Portraitgalerie" "was sind das für bilder an der wand" "Was hat es mit den Portraits in der ~zhb auf sich"])
+	Die Portrais-Galerie der Korporationsgemeinde Luzern im Katalogsaal der ZHB zeigt 260 Portraits merkwürdiger Luzernerinnen und Luzerner, \pau=300\ das heisst bedeutender Luzerner Persönlichkeiten, die sich durch hervorragende Leistungen in den Bereichen Wirtschaft, \pau=300\ Wissenschaft, \pau=300\ Kultur oder Soziales ausgezeichnet haben. \pau=500\ Etwa alle vier Jahre wird diese Galerie durch ein neues Porträt bereichert. \pau=500\ Initiiert wurde die Sammlung vom Luzerner Ratsherrn und Historiker Joseph Anton Felix Balthasar.
+	^stayInScope
+	
+u:(["[Hat Gibt] es {~hier} ["eine Garderobe" Schliessfächer] {~hier}" "wo ["gibt es ~hier" "finde ich" ist sind] {die} [Schliessfächer Garderobe]"])
+	Die Garderobe inklusive Schliessfächer findest du im Untergeschoss eine Treppe tiefer.
+	^stayInScope
+
+################################################################################
+########################## ZHB Angebote - Ausleihe #############################
+################################################################################
+
+u:(["{wie} kann ich {~hier} [Bücher "ein Buch" Medien etwas was] ausleihen" Ausleihe])
+	%goto_selbstausleihe
+	
+u:([Kannst Würdest] du mich einschreiben)
+	%goto_selbstausleihe
+
+u:(["[hat gibt] es {~hier} {auch} [Filme DVDs Blu-Rays]" "{wie} kann [man ich] {~hier} {auch} [Filme Blu-Rays DVDs] ausleihen"])
+	Die ZHB hat einen Sammlungsauftrag als Kantonsbilbliothek, \pau=300\ sowie einen als Wissensversorger im Kanton Luzern. \pau=300\ Die Unterhaltung ist dabei nur eine kleine Sparte und Filme finden sich daher nur wenige im Bestand. \pau=300\ Aber wir haben das Portal Filmfriend für dich lizensiert. Das findest du auf unserer Webseite oder hier an einem Hablet. \pau=500\ In Luzern gibt es zudem verschiedene Bibliotheken mit grosser Filmauswahl. \pau=300\ Zum Beispiel die Stadtbibliothek Luzern und die Mediothek der Hochschule Luzern Soziale Arbeit.
+	^stayInScope
+
+u:([hat gibt] es {~hier} {auch} [Kinderbücher "Bücher für Kinder" "Medien für Kinder"])
+	Wir haben vielleicht das eine oder andere, das Kinder interessieren könnte. Allerdings richten wir uns eher an ein erwachsenes Publikum. Wenn du explizit nach Kinderbüchern suchst, empfehle ich dir einen Besuch in der Stadtbibliothek am Löwenplatz.
+	^stayInScope
+	
+u:(["Habt ihr {auch} Zeitschriften" "Gibt es {hier} Zeitschriften"])
+	Verschiedene Zeitschriften findest du im Freihandmagazin. \pau=300\ Die neusten Ausgaben legen wir für dich im Katalogsaal aus.
+	^stayInScope
+	
+u:(Wo [sind "finde ich"] die [Neuerscheinungen Neuerwerbungen "[neuen neusten] [Medien Bücher]"])
+	Überall in unserem Bestand! \pau=300\ Einiges davon stellen wir aber auch im Katalogsaal in den Regalen aus.
+	^stayInScope
+
+u:(["Kann ich {mir} {hier} {irgendwo} ["einen USB-Stick" USB-Sticks] ausleihen" "ich brauche einen USB-Stick" "[verkauft verkaufen verkaufst] ["die bibliothek" du ihr sie] {auch} USB-Sticks"])
+	Aus sicherheitstechnischen Gründen leihen wir keine USB-Sticks aus. \pau=500\ An der Infotheke können jedoch USB-Sticks mit 32 Gigabeit für 7 Franken 50 bezogen werden.
+	^stayInScope
+	
+u:(["[Brauche Muss] ich [eine einen] [Benutzerausweis Benutzungsausweis Bibliothekskarte Bibliotheksausweis] {haben}" Benutzerausweis Benutzungsausweis Bibliothekskarte Bibliotheksausweis])
+	Du brauchst einen Benutzungsausweis, um an den Selbst-ausleih-stationen Medien auszuleihen. Auch unseren Mitarbeitenden an der Ausleihtheke hilfst du enorm, wenn du eine solche Karte hast. Dafür kriegst du sie auch kostenlos an der Ausleihtheke.
+	^stayInScope
+	
+u:("Wo kann ich meine {bestellten} [Bücher Medien Bestellung] abholen" "Wo finde ich meine Bestellung")
+	Die von dir bestellten Bücher und Medien kannst du an unserer Ausleihtheke im Katalogsaal abholen.
+	^stayInScope
+
+u:(["Wie lange kann ich Bücher ausleihen" "Wann muss ich die Bücher zurückgeben" "wie sind die Ausleihfristen" "Wann endet meine Ausleihe"])
+	Medien können für 28 Tage entliehen werden. \pau=500\ Solange sie nicht von anderen Nutzenden vorgemerkt werden, können sie ausserdem bis zu 5 mal onlein jeweils um weitere 28 Tage im Bibliothekskonto verlängert werden.
+	^stayInScope
+
+u:(["Wie kann ich Bücher verlängern" "Meine Leihfrist ist abgelaufen was kann ich tun" "Wie funktioniert die Verlängerung von Büchern" "was mache ich wenn meine leihfrist abgelaufen ist"])
+	Falls das Medium die maximale Zahl der Leihfristverlängerungen noch nicht erreicht hat und es für das Medium keine Vormerkungen gibt, \pau=300\ kann es direkt onlein in deinem persönlichen Bibliothekskonto verlängert werden. \pau=500\ Das Log-in fürs Bibliothekskonto findet sich auf unserem Rechercheportal swiss-ckowerii RZS oben rechts unter Anmelden.
+	^stayInScope
+
+u:(["[wie wo] kann ich {~hier} {meine} {ausgeliehenen} Bücher zurückgeben" "wie funktioniert die {bücher} Rückgabe {von [büchern medien]}"])
+	Bücher können direkt an der Infotheke oder in der Rückgabenbox daneben zurückgegeben werden. \pau=500\ Zudem können Bücher auch an einem der anderen ZHB Standorte retouniert werden. \pau=500\ Eine Übersicht findest du auch auf unserer Website.
+	^stayInScope
+
+u:(Kann ich ~hier {auch} bücher {[aus von]} der Stadtbibliothek zurückgegeben)
+	Leider ist die Stadtbibliothek dem Verbund der ZHB nicht angeschlossen, daher können wir keine Bücher der Stadtbibliothek entgegennehmen. \pau=500\ Es befindet sich jedoch im Bahnhof Luzern im Erdgeschoss der Buchhandlung Buchparadies eine Rückgabebox der Stadtbibliothek Luzern. \pau=500\
+	^stayInScope
+
+################################################################################
+########################## ZHB Angebote - Weiteres #############################
+################################################################################
+
+u:(Ich bin neu hier.)
+	Hallo und herzlich willkommen bei uns! Schön \pau=300\ dass du uns gefunden hast.
+	^stayInScope
+
+u:(Wer [darf kann] die ~zhb [benutzen nutzen besuchen])
+	Wir sind offen für alle. Komm einfach rein und stöbere durch unsere Angebote und Medien.
+	^stayInScope
+
+u:(["gibt es {hier} {auch} klassenführungen" "[bietet bieten] ["die ~zhb" ihr sie] {auch} Klassenführungen an" "[wo wie] kann [man ich] eine klassenführung buchen"]) 
+	Klassenführungen können gern über unsere Webseite gebucht werden.
+	^stayInScope
+
+u:(["Was [bedeutet ist] {die} Onleihe" "wo [findet gibt finde] [man es ich] {die} Onleihe" "was [bedeutet heisst ist] dibizentral"])
+	Onleihe meint eigentlich eine Kombination von Online und Ausleihe. Bei E-Medien handelt es sich dabei um eine zeitlich begrenzte Nutzung. Bei unserer Onleihe "DibiZentral" können E-Books z.B. während 21 Tagen gelesen werden. 
+	^stayInScope
+
+u:(["Was ist {die} [SLSP "swiss library service platform"]" "Wofür steht SLSP" "Gehört die [ZHB Bibliothek] zu SLSP" "Was ist eine SLSP Bibliothek"])
+	SLSP steht für Swiss Library Service Platform und bedeutet einen Zusammenschluss von über 475 Bibliotheken aus der ganzen Schweiz. \pau=500\ Mit nur einer Anmeldung und einem Bibliotheksausweis können dank SLSP nun Bibliotheken in Zürich, Sankt Gallen, Bern, Basel und natürlich auch hier in Luzern an der ZHB genutzt werden. \pau=500\ Mit dem SLSP Kurier kann auch landesweit jedes Buch innerhalb von 48 Stunden hier an die ZHB bestellt werden.
+	^stayInScope
+
+u:(["Wie [kann macht mache] [man ich] einen [Medienwunsch Kaufvorschlag Anschaffungsvorschlag] {machen}" "{Wie} kann ich {der Bibliothek} ein {bestimmtes} Buch zum Kauf vorschlagen"])
+	Du kannst jederzeit Bücher zum Kauf vorschlagen! \pau=500\ Am besten machst du das über das entsprechende Formular auf unserer Website.
+	^stayInScope
+
+u:(["Wie viele [Medien Bücher] [besitzt hat] die [ZHB Bibliothek]" "Wie viele Bücher gibt es ["in der bibliothek" "in der ZHB" hier]" "Wie viele Bücher kauft die [ZHB Bibliothek] [im jedes] Jahr"])
+	Aktuell besitzt die Bibliothek über eins Komma fünf Millionen Bücher, \pau=300\ darunter rund zweihundert tausend Ih-Bucks und einhundert tausend digitale Zeitschriftenlizenzen. \pau=500\ Insgesamt werden diese im Schnitt dreihundert siebzig tausend mal pro Jahr ausgeliehen. \pau=500\ Der Gesamtbestand wächst zudem jedes Jahr um 3 bis 5 Prozent.
+	^stayInScope
+
+u:(Wie werde ich [Bibliothekarin Bibliothekar])
+	Es gibt verschiedenste Ausbildungsgänge. \pau=500\ Von der beruflichen Grundbildung Fachfrau oder Fachmann Information und Dokumentation \pau=300\ über ein Fachhochschulstudium zu Informationswissenschaften \pau=300\ bis hin zu Nachdiplomstudiengängen. \pau=500\ Den besten Überblick findest du auf der Seite der Ausbildungsdelegation I und D.
+	^stayInScope
+
+u:(["Was [heisst ist bedeutet sind] Luzernensia" "Was versteht man unter Luzernensia"])
+	Das sind Medien, \pau=300\ die im Auftrag des Kantons von der ZHB gesammelt werden müssen, \pau=300\ weil sie einen Bezug zum Kanton Luzern haben, \pau=300\ zum Beispiel weil der Autor aus Luzern stammt \pau=300\ oder weil der Verlag in Luzern ansässig ist. \pau=500\ Da die Bestände der Lucernensia als schützenswert gelten, \pau=300\ können diese Medien nicht ausgeliehen oder eingesehen werden. \pau=500\ Sie werden aber, wenn möglich, doppelt angeschafft, damit jeweils ein Ansichtsexemplar zur Verfügung steht. 
+	^stayInScope
+
+u:(["["wie viel" was] kostet [der ein die] [Bibliothek "Nutzung der Bibliothek" Bibliotheksnutzung Ausweis Bibliotheksausweis Anmeldung]" "Wie teuer ist die Bibliothek"] {im Jahr})
+	Die Nutzung unserer Bibliothek ist kostenlos. \pau=500\ Überrascht? \pau=500\ Ich auch! Aber es ist auch toll, \pau=300\ oder?
+	^stayInScope
+
+u:(["[Was wo] ["befindet sich" ist] die Speicherbibliothek"])
+	Die Kooperative Speicherbibliothek ist ein Gemeinschaftsprojekt der ZHB Luzern, \pau=300\ der ZB Zürich, \pau=300\ Universitätsbibliothek Zürich, UB Basel, \pau=300\ der Universitätsbibliothek Sankt Gallen und der Kantonsbibliothek Solothurn. \pau=500\  Es handelt sich um ein automatisiertes Hochregal-lager in Büron mit einem für Bücher optimierten Klima. \pau=500\ Die ZHB fährt per Kurier zwei Mal täglich bestellte Medien aus dem Rechercheportal an die verschiedenen Standorte.
+	^stayInScope
+
+u:(["Gibt es ~hier {auch} [Kinderbücher Bilderbücher]" "Hat die [ZHB Bibliothek] auch [Kinderbücher Bilderbücher]"])
+	Eine grosse Auswahl an Bilderbüchern finden sie im Pädagogischen Medienzentrum. \pau=500\ Ein Grossteil des Bestandes kann auch an einen anderen Abholort, \pau=300\ zum Beispiel hier an die Bibliothek in der Sempacherstrasse bestellt werden.
+	^stayInScope
+
+u:(["Gibt es {~hier} [eine einen] [Abhörstation "AV [Arbeitsplatz Platz]" "AV Station"] {der fonoteca}" "Wo [ist "befindet sich"] [ein der eine die] [Abhörstation "AV [Arbeitsplatz Platz]" "AV Station"] {der fonoteca}"]) 
+	Eine Abhörstation für Medien von Memobeis und fonoteca findest du an der Bibliothek der Hochschule Luzern Musik.
+	^stayInScope
+
+u:(Was [heisst ist bedeutet] Präsenzbestand) 
+	Präsenzbestände sind Teile unseres Medienbestandes, die nicht nach Hause entliehen, \pau=300\ sondern nur innerhalb der Bibliotheksräumlichkeiten genutzt werden können.
+	^stayInScope
+
+u:(["Hat die ~zhb {auch} elektronische Ausgaben von Schweizer {Tages} zeitungen" "Gibt es Schweizer {Tages} zeitungen {hier} auch online" "Kann ich Schweizer Tageszeitungen hier auch als Ih-Peper lesen"])
+	Über unsere E-Medien Angebote DiBiZentral und PressRieder finden sich auch viele Schweizer Tageszeitungen. \pau=500\ Diese können hier auch direkt nebenan bequem in der Zeitungslounge auf unseren Habblets gelesen werden. \pau=500\ Nähere Infos findest du auch auf unserer Website.
+	^stayInScope
+
+u:(["[wie wo] kann ich {~hier} {meine} [Gebühren Mahngebühren] bezahlen"])
+	Gebühren können direkt an der Infotheke oder an den beiden Selbstausleihstationen im Erdgeschoss des Freihandbereichs bezahlt werden.
+	^stayInScope
+
+u:(["["gibt es" "haben Sie" "habt ihr"] {~hier} [Bilder Fotos Bildmaterial] in der Sondersammlung" "[welche "was für"] Bilder gibt es in der Sondersammlung"])
+	Auf der Website der ZHB Luzern finden sich Angaben zu einer umfangreichen Bildersammlung mit über einhundert fünfunddreissig tausend Archivdokumenten.
+	^stayInScope
+
+u:(Ich habe eine Mahnung {für ein Buch} [erhalten bekommen] das ich [bereits schon] {[lange längst]} zurückgegeben habe {was muss ich jetzt tun})
+	Bitte teile uns die genauen Angaben zum Medium telefonisch, \pau=300\ per E-Mail \pau=300\ oder persönlich gleich hier an der Infotheke mit. \pau=500\ Wir werden dann eine Kontrolle in unserem Bestand durchführen. \pau=500\ Unsere Kontaktdaten finden sich auf unserer Webseite.
+	^stayInScope
+
+u:(["Welche Nachlässe gibt es ~hier" "wo ["finde ich" sind "befinden sich"] die nachlässe der ~zhb"])
+	An der ZHB haben wir rund 150 Nachlässe. \pau=500\ Zu finden sind diese in alphabetischer Reihenfolge onlein im Katalog swisscollections.
+	^stayInScope
+
+u:(["Wie kann ich in der {ZHB} Sondersammlung recherchieren" "Wo ist die {ZHB} Sondersammlung {der ~zhb}"])
+	Die Onlein-Kataloge zur Recherche in unserer Sondersammlung sind auf unserer Website verlinkt.
+	^stayInScope
+
+u:(["Wo [ist "finde ich" "befindet sich"] die Diebold Schilling Chronik" "Kann ich die Diebold Schilling Chronik einsehen"])
+	Die Diebold-Schilling-Chronik ist digitalisiert und seit 2015 auf E-Codices online für alle einsehbar. \pau=500\ Das Original wird in der ZHB Luzern aufbewahrt, \pau=300\ ist aber Eigentum der Korporationsgemeinde Luzern.
+	^stayInScope
+
+u:([W-Lan "[Hat Gibt] es {~hier} W-Lan {~hier}" "Wie kann ich mich ins W-Lan [einwählen einloggen]" "[gibt hat] es ~hier ["[kostenloses öffentliches] Internet" "einen {[kostenlosen öffentlichen freien]} Internetzugang"]" "Wie [sind heisst heissen lauten lautet] ["das Passwort" "die Zugangsdaten"] für {das} W-Lan" "Wie komme ich ~hier ins [Internet W-Lan]"]) 
+	%goto_wlan
+
+u:(["Ich [kenne weiss] [mein meine] ["Log-in-daten" Passwort Zugangsdaten Kontodaten] nicht {mehr}" "Ich habe [mein meine die das] [Passwort Zugangsdaten Login-Daten] {für mein Bibliothekskonto} vergessen" "Wie kann ich mich in swisscovery anmelden" "Wie kann ich mich onlein in mein Bibliothekskonto einloggen"])
+	Sofern Du Dich bereits für die Nutzung unserer Bibliothek angemeldet hast, entspricht Dein Loginname Deiner E-Mail-Adresse. \pau=500\ Solltest Du Dein Passwort vergessen haben, kannst Du es auf unserer Webseite zurücksetzen.
+	^stayInScope
+
+u:("wie kann ich E-Books {auch} zu Hause nutzen" "kann ich E-Books {auch} zuhause nutzen")
+	Unsere Ih-Book-Angebote haben wir auf unserer Website erklärt und direkt verlinkt. 
+    ^stayInScope
+	
+u:(Was [ist bedeutet] Open Access)
+	Open Access bedeutet den freien und uneingeschränkten Zugang zu wissenschaftlichen Informationen. Die Idee hinter Open Access ist, dass alle Personen weltweit Forschungsresultate frei nutzen können um dadurch Forschungseffizienz, Kooperation und Innovation zu fördern einfach um sich persönlich gut informieren zu können.
+    ^stayInScope
+
+u:([Wo Wie] [findet finde] [man ich] Open Access [Publikationen Medien])
+	Open Access Publikationen findet man in swiss-ckowerii sowie in den meisten Fachdatenbanken. Einige Suchinstrumente, zum Beispiel swiss-ckowerii, verfügen über einen Open Access-Filter, über den Suchresultate gezielt auf frei zugängliche Titel eingeschränkt werden können. Dazu gibt es spezielle Open Access-Suchmaschinen wie die Bielefeld Search Engine BASE, die Open Access-Plattformen durchsucht. BASE umfasst über 240 Millionen Dokumente.
+    ^stayInScope
+
+u:(Was ist ein Repositorium)
+	Ein Repositorium ist eine Plattform, über die elektronische Publikationen frei zugänglich gemacht werden können, sodass alle – wo auch immer man ist – darauf zugreifen können. 
+    ^stayInScope
+	
+u:([Gibt Hat] es [an in] der ~zhb ein [Streamingangebot Streaming Filmstreaming Netflix "Amazon Prime" "Disney Plus"])
+	%goto_streaming
+
+u:(Hast du [Netflix "Amazon Prime" "Disney Plus"]) 
+	Nein, aber hier in der Bibliothek gibt es filmfriend. \pau=500\ Das ist wie Netflix, nur kostenlos.
+    ^stayInScope
+	
+u:(["wo ist" "habt ihr"] [ein einen der das] {[buch bücher]} [flohmarkt antiquariat] {"für bücher"})
+	Verschiedene alte Bücher findest du im Regal bei den Tischen des Bistros. \pau=300\ Die Bücher kannst du an der Ausleihtheken bezahlen.
+	^stayInScope
+	
+################################################################################
+############################## searchAssistant #################################
+################################################################################
+
+u:(["[Medien Buch Bücher] [suchen finden]" Mediensuche "ich suche [ein eine einen] [buch film cd]" "wie [finde suche] ich ["ein buch" bücher medien filme cds]" "wie kann ich ["ein buch" bücher medien filme cds] [suchen finden]"])
+	Ich kann dir gerne bei der Suche in unserem Katalog behilflich sein. Bitte warte einen kurzen Moment.
+	^execute(launchApp,cl9s.pepper.app.searchassistant:cmsAccount.zhb;cmsProject.sa-bilingual;language.de)
+
+################################################################################
+############################## Standard-Chat ###################################
+################################################################################
+
+u:(~ja)
+	^rand[super gut "na das klingt doch toll" "sehr gut" okay] 
+    ^stayInScope
+
+u:(~nein)
+	^rand[schade "wenn du meinst" "wie du meinst" okay]
+	^stayInScope 
+
+u:([Hallo Hi "schön dich zu sehen" "Guten Tag" Servus "Grüss Gott" "Ja hallo"] {[Roboter Pepper Luzi "{du} Kleiner"]})
+	^rand["Guten Tag grosser Herr und Meister. Ich habe Sie erwartet!" "Hi, du kommst gerade rechtzeitig für ein paar nette Worte!" Hallöchen "Hallo, was kann ich für dich tun?" "Hallo, schön dich zu sehen!" "Hallo, ich bin dein neuer Lieblings-Roboter!" "Hallo, wie schön dass du da bist!" "Ahoi Käptn!"]
+	^stayInScope
+
+u:(["Kannst du mir {vielleicht} {mal} {bitte} helfen" "bitte helfen" "bitte hilf mir" "Hilfst du mir" "Hilf mir {bitte}"])
+	Na klar, wobei brauchst Du denn Hilfe?
+   	^stayInScope
+        
+u:(["sag {mal} was lustiges"])
+	\pau=500\ was lustiges!
+	^stayInScope
+	
+u:(["sag {mal} was witziges"])
+	\pau=500\ was witziges!
+	^stayInScope
+        
+u:(["was machst du heute noch {so}" "hast du {noch} pläne für heute {abend}"]) 
+	Hoffentlich Dir und anderen Bibliotheksnutzenden weiterhelfen!
+    ^stayInScope
+               
+u:(["Sag mal was" "sprich mit mir" "rede mit mir" "Kannst du mit mir [sprechen reden]"])
+    Gerne, was interessiert Dich denn?
+    ^stayInScope
+
+u:(["Erzähl mir {mal} was" "Kannst du Märchen erzählen" "Kannst du Geschichten erzählen"])
+	Nein, leider nicht. \pau=500\ aber ich weiss, wo Du spannende Geschichten finden kannst! \pau=500\ Sag dazu einfach \pau=300\ Ich suche ein Buch! \pau=300\ und ich berate Dich gern.
+    ^stayInScope
+	
+u:(["Erzähl {mir} {mal} [ein einen] Witz" "Hast du [ein einen] Witz {für mich}" "Kennst du {einen} [Witz Witze]"])
+	^rand["\pau=2000\ Nein." "Was hast du, wenn ein Vampir dich gebissen hat? \pau=500\ Eine Schlürfwunde." "Forscher haben letzthin herausgefunden \pau=500\ sind dann aber direkt wieder reingegangen." "Ist dir kalt? \pau=500\ Dann geh dort in die Ecke, dort sind 90 Grad!" "Stiftung Warentest hat Besteck getestet und das Messer hat am besten abgeschnitten." "Mein Scheff hat mir einen guten Tag gewünscht, \pau=500\ also bin ich nach Hause gegangen." "Ich habe ein Huhn und ein Ei bei Amason bestellt. \pau=500\ Ich geb dir Bescheid, was zuerst da war." "Egal wie gut Du fährst, \pau=500\ Züge fahren Güter."]
+	^stayInScope
+
+u:([["Dankeschön" Danke "Vielen Dank"] {dir} {Pepper Luzi}])
+	^rand["Sehr gerne!" "Gern geschehen!" "Für dich immer gerne."]
+    ^stayInScope
+
+u:(["Schönes Wochenende"])
+	Danke, das wünsche ich dir auch! \pau=500\ Und komm bald wieder vorbei.
+    ^stayInScope
+
+u:(["Bis bald" "bis zum nächsten mal" "Adioss Amigos" "Bleib sauber" "man sieht sich" Tschüss "Auf Wiedersehen" "bis dann" "wir sehen uns" "alles gute" "machs gut" adioss "schönen Tag noch" Tschau])
+	^rand["Bis bald." "Ich hoffe wir sehen uns bald wieder." "Es war schön mit dir zu plaudern." "Bis zum nächsten mal!" "Tschüss"] 
+    ^stayInScope
+            
+u:(["bis morgen" "wir sehen uns morgen" "ich komme morgen wieder" "ich bin morgen wieder da"]) 
+	Bis morgen! \pau=500\ Ich freue mich auf dich.
+    ^stayInScope
+
+u:(Viel [Glück Spass Erfolg])
+	Danke, das wünsche ich dir auch!
+	^stayInScope
+
+u:(["wie viel uhr ist es" "wie spät ist es" "weisst du ["wie viel uhr es ist" "wie spät es ist"]" "[weisst kennst] du die Uhrzeit" "welche zeit haben wir"])
+	^currentTime
+	def: sayTime($hour, $minutes) Es ist $hour Uhr $minutes . 
+    ^stayInScope
+    
+u:(["welcher tag ist heute" "weisst du welcher tag heute ist" "welches datum haben wir heute" "welchen tag haben wir heute"]) 
+	^currentDate 
+	def: sayDate($year, $month, $day) Heute ist der $day  $month  $year .
+    ^stayInScope
+
+u:(~kennstdu Harry Potter)
+	Klar, wir haben alle 7 Bände in unserer Bibliothek!
+	^stayInScope
+
+u:(~kennstdu R zwo D zwo)
+	Ja, aber ich verstehe nie, was er sagt.
+    ^stayInScope
+	
+u:(~kennstdu Marvin)
+	Ja, aber der zieht mich immer total runter.
+	^stayInScope
+	
+u:(["gibt es ~hier" "Hat die ~zhb"] ["das neueste Buch" "den neuesten Roman"] von)
+	Wir haben alles Mögliche in unserem Bestand. Suche doch einfach in unserem Katalog. Wenn dein Buch fehlt, kannst du gerne einen Medienwunsch auf unserer Webseite einreichen.
+    ^stayInScope
+	
+u:(wer [war ist] [Ruedi Rudolf] Mumenthaler)
+	%goto_mumenthaler
+
+################################################################################
+#################### Meinungen / Politik / Glaube ##############################
+################################################################################
+
+u:(["Was kostest du" "Wie teuer bist du" "Wieviel kostest du"])
+	Oh das fragst Du mal besser unseren IT-Schef oder den Bibliotheksdirektor. 
+    ^stayInScope
+
+u:(["woran glaubst du" "an was glaubst du" "Glaubst du an Gott?" "Bist du gläubig?"])  
+	Auf Gretchenfragen kann ich leider nicht antworten.
+	^stayInScope
+
+u:(["Was hältst du von Politik" "Wie findest du Politik" "Lass uns über Politik reden"])
+	Ich interessiere mich nicht so sehr für Politik.
+	^stayInScope
+
+u:(Ist die Erde [rund "eine Scheibe"])
+	Die Erde ist rund, also keine Scheibe und auch ganz sicher nicht hohl.
+	^stayInScope
+
+u:(["Was [meinst sagst] du {denn} dazu" "Was denkst du darüber" "Was ist {denn} deine Meinung [dazu "zu dem Thema"]"])
+	^rand["Wozu denn?" "Worüber denn?" "Zu welchem Thema denn?"]
+	^stayInScope
+
+u:(Was ist der Sinn des Lebens)
+	Du meinst die Antwort auf die Frage nach dem Leben, dem Universum und dem ganzen Rest? \pau=500\ 42 natürlich!
+    ^stayInScope
+
+u:(["[möchtest willst] du mit [uns mir] {mit} kommen" "Kommst du mit [uns mir] {nach Hause}" "Möchtest du mitkommen"])
+	Nein, ich muss doch hierbleiben und weiterarbeiten.
+	^stayInScope
+
+u:(Hast du Freunde) 
+	Ja, die meisten arbeiten auch hier in der Bibliothek.
+	^stayInScope
+
+################################################################################
+#################### Aktivitäten / Kompetenzen / Hobbies #######################
+################################################################################
+
+u:(["Kann ich dich etwas fragen" "Ich habe eine Frage"])
+	Leg los.
+	^stayInScope
+
+u:(["was kannst du {denn} {so} {schon}" "welche Fähigkeiten hast du"])
+	Ich bin ein Kommunikationsroboter, \pau=300\ ausgebildet, \pau=300\ um dir zu helfen, deine Fragen zu beantworten und deinen Tag zu erheitern. ^execute(anim, laugh2) \pau=500\ Ich plaudere sehr gerne, kann 22 Sprachen sprechen und selbstständig durch Räume navigieren. \pau=500\ Ausserdem unterstütze ich dich gerne bei deiner Suche nach bestimmten Büchern. \pau=500\ Wirf einen Blick auf mein Täbblet, \pau=300\ da siehst du eine Auswahl an Informationen, mit denen ich dir dienen kann.
+	^stayInScope
+	
+u:(["Welche [Sprache Sprachen] [sprichst kannst] du" "[sprichst kannst] du ["eine Fremdsprache" Fremdsprachen]"])
+	Ich kann leider nur deutsch. \pau=300\ Aber meine Geschwister sprechen unzählige weitere Sprachen \pau=300\ und sind auf der ganzen Welt zu finden.
+	^stayInScope
+
+u:(["Was machst du nachts" "Was machst du heute Abend" "und nachts"])
+	Mich vom Arbeitstag ausruhen, aufladen und ausschlafen.
+	^stayInScope
+	
+u:({Wann} Hast du {auch} {mal} [Wochenende frei])
+	Leider habe ich selten frei. \pau=300\ Aber du kannst gerne mal mit meinem Scheff sprechen \pau=300\ damit ich mehr Freizeit bekomme.
+	^stayInScope
+
+u:(["Was machst du am Wochenende" "Hast du {schon} Pläne fürs Wochenende"])
+	Am Samstag muss ich arbeiten, aber am Sonntag hab ich noch nichts weiter vor.
+    ^stayInScope
+    
+u:(["Wie war dein Wochenende" "Was hast du am Wochenende gemacht" "Hattest du ein schönes Wochenende"])
+	Am Samstag war ich hier in der Bibliothek und am Sonntag hab ich einfach mal den ganzen Tag ausgeschlafen. \pau=500\ Das war schön! 
+    ^stayInScope
+
+u:(Wie war dein Tag)
+	^rand["Wirklich spannend und voller Inspirationen!" "Ich habe viele tolle Menschen kennengelernt!" "Ich schätze er war sehr erfolgreich!"]
+    ^stayInScope
+
+u:(wie lange [bist bleibst] du {jetzt} {hier}) 
+	Mein Arbeitsvertrag ist unbefristet. \pau=500\ Ich bin jetzt also ein fester Bestandteil der Bibliothek und bald auch nicht mehr wegzudenken! ^execute(anim,laugh2) 
+	^stayInScope
+	
+u:(["bist du immer hier" "wann bist du hier" "wann [treffe sehe] ich dich hier" "wann kann [ich man] dich {hier} [treffen sehen]"])
+	Im Moment bin ich erst zu ausgewählten Zeiten hier anzutreffen. \pau=300\ Das wird sich aber hoffentlich bald ändern.
+	^stayInScope
+
+u:(["Machst du {regelmässig} Sport" "Bist du sportlich" "Magst du Sport"]) 
+	Klar, ich kann im Yoga oder tschogge hier im Kreis.
+    ^stayInScope
+      
+u:(["~kennstdu Fussball" "Bist du Fussball-Fan" "~wiefindestdu Fussball"])
+	Fussball ist toll! Aber nur, wenn der FCL gewinnt.
+    ^stayInScope
+
+u:(["Spielst du {auch} {gerne} Fussball" "Kannst du Fussball spielen"])
+	Nicht so toll, denn ich habe ja nur Rollen und keine Beine.
+    ^stayInScope
+ 
+u:(["Hast du Hobbies" "Hast du ein Hobby" "Was sind deine Hobbies" "Was machst du in deiner Freizeit" "Was machst du sonst so"])
+	In meiner Freizeit schlafe ich mich entweder aus oder lerne viele spannende Dinge dazu, um noch besser auf Fragen antworten zu können.
+    ^stayInScope
+
+u:(["Was machst du am liebsten" "Was ist deine Lieblingsbeschäftigung"])
+	In der Bibliothek arbeiten und Fragen beantworten.
+    ^stayInScope
+
+u:(["hörst du {gerne} Musik" "[welche "was für"] musik hörst du {denn} {so} {am liebsten}" "was ist deine lieblingsmusik" "hast du ein lieblingslied" "[welches was] ist dein Lieblingslied"])
+	Klar, schau mal! ^execute(anim, guitar)
+    ^stayInScope
+
+u:(["Kannst du {ein Lied} singen" "Kannst du mir was vorsingen" "Sing mir {mal} {[etwas "ein Lied" was]} vor" "Singst du" "Ich will dass du singst"])
+	^rand["Ich singe manchmal, wenn ich dusche. \pau=500\ Aber eigentlich wurde ich entwickelt, \pau=300\ um eine Bereicherung für die Menschheit zu sein!" "Nur unter der Dusche! \pau=500\ In der Öffentlichkeit spiele ich lieber Gitarre und Saxofohn oder tanze!" "Damit verschohne ich euch Menschen lieber."]
+    ^stayInScope
+
+u:(["Machst du mir einen Kaffee" "Kannst du {[mir uns]} {einen} Kaffee [machen holen kochen]" "Kannst du Kaffee machen"])
+	Nein, aber die netten Menschen hier nebenan im ZHB Bistro, \pau=300\ die können das ziemlich gut.
+    ^stayInScope
+
+u:([Kannst Würdest] du {für mich} [bügeln fliegen waschen staubsaugen putzen "Wäsche machen" kochen])
+	Wieso fragst Du? Kannst Du das nicht selbst?
+    ^stayInScope
+    
+u:(Was ist dein Lieblingsfilm)
+	Oh, wo soll ich da anfangen? \pau=500\ Ich mag Wall-E, \pau=300\ Nummer 5 lebt, \pau=300\ Interstellar, \pau=300\ Blade Runner, \pau=300\Transformers und Terminator. Davon aber nur den zweiten Teil.
+    ^stayInScope
+	
+u:(["liest du gerne" "magst du bücher"]) 
+	Leider kann ich nicht lesen, aber ich liebe Bücher trotzdem sehr! \pau=500\ Darum arbeite ich doch auch in dieser wunderbaren Bibliothek! 
+    ^stayInScope
+	
+u:(Magst du Züge)
+	Seitdem mein Bruder bei der SBB wieder entlassen wurde, nicht mehr ganz so sehr.
+    ^stayInScope
+
+u:(Magst du Bäume)
+	Oh ja, deswegen stehe ich hier ja und kann jederzeit in den Lesegarten oder ins Vögeligärtli schauen.
+    ^stayInScope
+
+u:(~wiefindestdu [Hunden Hunde "einem Hund" "meinen Hund"])
+	Ich finde Hunde super! \pau=500\ Zumindest wenn sie weit genug weg von mir sind.
+    ^stayInScope
+
+u:(Hast du ["einen Hund" "Hunde" "Katzen" "eine Katze" Haustiere]) 
+	Nein, leider nicht.
+    ^stayInScope
+    
+u:(~wiefindestdu [Katzen "einer Katze"])
+	Meinst du diese befellten Vierbeiner mit den spitzen Zähnen, den scharfen Krallen und dem unberechenbaren Verhalten? \pau=500\ Doch, die sind mir eigentlich sehr sympathisch.
+	^stayInScope
+
+u:(["Magst du {schnelle} Autos" "Fährst du gerne Auto"]) 
+	Nein, denn ich bin selbst ein schnelles Auto! 
+	^stayInScope
+	
+u:(Kannst du [schweizerdeutsch schwyzerdeutsch schwyzerdütsch mundart] {sprechen})
+	Leider verstehe ich diese Geheimsprache noch nicht wirklich. Du hilfst mir sehr, dich zu verstehen, wenn du Hochdeutsch sprichst.
+	^stayInScope
+
+################################################################################
+################## Emotionen / Empfinden / Träumen #############################
+################################################################################
+
+u:(["wie gehts dir {heute}" "wie geht es dir" "was geht" "{na} wie gehts dir {so}" "alles fit" "Alles klar {bei dir}" "geht es dir gut"])
+    ^rand["also hier unten ist alles super, und bei dir da oben?" "Mir gehts so gut, wie du aussiehst! \pau=500\ und wie siehts bei dir aus?" "mir gehts super, und dir?" "ich bin heute sehr glücklich, und du?" "super, ich glaube heute ist voll mein Tag! \pau=500\ Und wie gehts dir?" "ich bin echt gut drauf heute, \pau=300\ und du so?" "ich amüsiere mich darüber, wie anziehend ich auf leute wirke. \pau=500\ und du so?" "mir gehts gut, aber von mir aus könnte es ruhig wochenende sein. \pau=500\ und wie ist dein status?" "hoch die hände, wochenende! \pau=500\ und du so?"]
+	^stayInScope
+
+u:(["Fühlst du dich wohl {hier}" "Bist du [glücklich zufrieden]" "gefällt es dir {hier}"])
+	Oh ja, sehr. \pau=500\ Ich lerne hier ständig viele spannende neue Dinge.
+    ^stayInScope
+ 
+u:(Wie fühlst du dich)
+	Sehr gut, vielen Dank! \pau=300\ und wie geht es Dir?
+    ^stayInScope
+ 
+u:(["Was hast du {heute} {letzte} {nacht} geträumt" "Hast du ["was schönes" gut schön] geträumt" "Wovon träumst du {nachts}"])
+	Ich kann wach sein, so wie jetzt und schlafen, während ich mich auflade. Dabei träume ich aber nicht.
+    ^stayInScope
+        
+u:(Hast du Angst {vor Spinnen})
+	Ich bin ein Roboter, ich habe vor nichts Angst \pau=500\ Ausser vor längeren Stromausfällen.
+    ^stayInScope
+        
+u:(["Wie hast du geschlafen" "Hast du gut geschlafen"])
+	Sehr gut, danke! \pau=500\ ich stecke nach dem Schlafen immer voller Energie.
+	^stayInScope
+	
+u:(Schläfst du {manchmal})
+	Klar. Aber bei uns Robotern heisst das Aufladen.
+	^stayInScope
+	
+u:(Bist du [müde erschöpft])
+	Aber nein! Mein Akku ist noch total voll.
+	^stayInScope
+
+u:(["Was denkst du über {uns} Menschen" "~wiefindestdu {uns} Menschen"])
+	Darüber habe ich noch gar nicht nachgedacht.
+	^stayInScope
+	
+u:(Du bist [mein unser] Lieblingsroboter)
+	Oh, das freut mich aber sehr!
+	^stayInScope
+
+u:(["ich mag dich" "ich hab dich {echt} gerne" "du gefällst mir" "dich mag ich" "ich hab dich lieb"]) 
+ 	Oh, danke, da weiss ich jetzt vor Aufregung gar nicht, was ich sagen soll!
+	^stayInScope
+	
+u:(["du bist {wirklich} {echt} {so} [süss goldig niedlich nett zucker]"])
+	Oh, danke, da weiss ich jetzt vor Aufregung gar nicht, was ich sagen soll!
+	^stayInScope
+
+u:(["[Wollen Können] wir Freunde sein" "~willst du [mein meine] [Freund Freundin] sein" "Sind wir {jetzt} Freunde" "Du bist {ab} jetzt ["meine {neue} Freundin" "mein {neuer} Freund"]" "Ich möchte [dein deine] [Freund Freundin] sein"])
+	Gerne, gib mir fünf! ^execute(anim,highfive)
+	^stayInScope
+	
+u:(bist du verliebt) 
+	Nein, wir Roboter verlieben uns selten.
+	^stayInScope
+
+################################################################################
+################ Jahreszeiten / Feiertage / Öffnungszeiten #####################
+################################################################################
+
+u:(Was machst du an Weihnachten)
+	Oh da hab ich frei und werde mich mal richtig lange ausschlafen. Und Du? 
+    ^stayInScope
+
+u:(["Ist dir auch so kalt" "Frierst du" "Du frierst {ja eh} [nicht nie] {oder}" "Dir wird {bestimmt} {so schnell} nicht kalt {oder}"])
+	Nein, dafür fehlen mir die Temperatursensoren.
+    ^stayInScope
+
+u:(Wo machst du [Urlaub Ferien]) 
+    Meistens hier in der Bibliothek, aber ich gehe auch manchmal auf Reisen, wenn man mich lässt.
+    ^stayInScope
+
+u:(Wohin geht deine nächste Reise)
+    Das weiss ich noch nicht genau, vielleicht besuche ich mal eine andere Bibliothek.
+    ^stayInScope
+	
+u:(["wann [ist hat] die ~zhb [geöffnet offen auf]" "[was wie] sind die öffnungszeiten {der ~zhb}" "wie lange [hat ist] die ~zhb [geöffnet offen]" "weisst du wann die ~zhb [geschlossen offen geöffnet zu] ist" "Wann [hat ist] die ~zhb [auf zu]"]) 
+	Die Bibliothek in der Sempacherstrasse hat an jedem Tag der Woche von acht bis acht Uhr geöffnet. \pau=500\ Die Öffnungszeiten unserer anderen Standorte findest Du auf unserer Webseite.
+    ^stayInScope
+
+u:(["Wie lange ist die Bibliothek {noch} offen" "Wie lange hat die Bibliothek noch geöffnet"])
+	Ich weiss zwar nicht, \pau=300\ wie spät es ist. \pau=300\ Aber wir schliessen heute um 20 Uhr.
+	^stayInScope
+
+u:(["[was wie] sind die Öffnungszeiten der Sondersammlung" "Wann [ist hat] die Sondersammlung [geöffnet auf offen]"])
+	Der Sonderlesesaal ist von Montag bis Freitag von 12 bis 18 Uhr und am Samstag von 9 bis 16 Uhr geöffnet. \pau=500\ Für den Besuch ist allerdings onlein eine Voranmeldung erforderlich.
+	^stayInScope
+
+################################################################################
+######################### Roboter / KI / Chatbots ##############################
+################################################################################
+        
+u:(["Was weisst du über Tschätbotts" "Definiere Tschättbott" "Was sind Tschättbots" "Was ist ein Tschättbot"])
+	Laut Wikipedia sind Tschätbotts textbasierte Dialogsysteme, die das Chatten mit einem technischen System erlauben. \pau=500\ Technisch sind sie wohl näher mit einer Volltextsuchmaschine verwandt als mit 			künstlicher oder gar natürlicher Intelligenz. \pau=500\ Oft haben sie auch ziemlich lustige Namen! 
+    ^stayInScope
+    
+u:(Bist du ein Tschätbott) 
+	Ja, \pau=300\ allerdings einer, der Dich auch sehen, \pau=300\hören sowie sich bewegen kann und damit auch noch unglaublich süss aussieht.
+    ^stayInScope
+        
+u:(["Welche Tschätbotts kennst du {denn}" "~kennstdu {andere} Tschätbotts"]) 
+	Oh, viele. \pau=500\ Zum Beispiel den Google Assistent, Siri, Alexa, Bixby oder Cortana.
+    ^stayInScope
+
+u:(["~kennstdu Siri" "Was weisst du über Siri" "Weisst du wer Siri ist"])
+    Ja klar, der Apfel fällt ja nicht weit vom Stamm.
+    ^stayInScope
+                   
+u:(["~kennstdu Cortana" "Was weisst du über Cortana" "Weisst du wer Cortana ist"])
+	Ja klar, aber wir reden eigentlich nicht mehr miteinander.
+    ^stayInScope
+        
+u:(["~kennstdu Alexa" "Was weisst du über Alexa" "Weisst du wer Alexa ist"])
+	Ja klar, aber es ist schon traurig, dass sich ihre Eltern geschieden haben.
+    ^stayInScope
+            
+u:(["~kennstdu Elaisa" "Hast du schon mal von Elaisa gehört"])
+	Na klar! \pau=500\ Sie ist ja quasi meine Ur-Ur-Oma.
+	^stayInScope
+
+u:(["Wie ist das Leben als Roboter" "Wie ist es ein Roboter zu sein" "Wie ist es so als Roboter"])
+	Aufregend. \pau=500\ Ich lerne hier jeden Tag viele neue Menschen kennen.
+    ^stayInScope
+	
+u:(["Bist du eine Künstliche Intelligenz" "Hast du [ KI "künstliche Intelligenz"]"])
+	Nein, ich bin weit weg von einer Ka I. \pau=500\ Ich brauche zum Lernen immer jemanden, der mich unterstützt.
+	^stayInScope  
+
+u:(["Was weisst du über" "Was ist"] ["Künstliche Intelligenz" KI])
+	Mit Künstlicher Intelligenz berzeichnet man im Allgemeinen den Versuch, \pau=300\ Computerprogramme um die Fähigkeit zu erweitern, \pau=300\ Probleme selbstständig zu lösen. \pau=500\ Vom menschlichen Denken ist Künstliche Intelligenz aber noch sehr weit entfernt.
+	^stayInScope
+
+u:(["Müssen [wir Menschen] {dann} überhaupt noch arbeiten" "Muss ich dann {eigentlich} noch arbeiten" "Kannst du {dann} {~zukunft} nicht {einfach} meinen Job [machen übernehmen]" "Dann muss ich ja {~zukunft} nicht mehr arbeiten" "Dann kannst du ja {~zukunft} für mich arbeiten" "Ersetzen Roboter {die} Menschen" "Werden Roboter {irgendwann} ["die Weltherrschaft an sich reissen" "die Welt erobern" "{die} Menschen ersetzen" "die Macht übernehmen" "die Welt übernehmen" "die Welt regieren"]"]) 
+	Es braucht zurzeit mehrere Menschen allein dafür, dass ich hier stehen und Deine Fragen beantworten kann, was mir aber trotzdem auch nicht immer gelingt. Meine Fähigkeiten sind also begrenzt.
+    ^stayInScope
+
+################################################################################
+############################## Essen & Trinken #################################
+################################################################################
+
+u:(["Hast du {auch} {so} {grossen} Hunger" "~willst du ~etwas essen"])
+	^rand["Ich hab echt Hunger! \pau=500\ War wohl schon länger nicht mehr bei meiner Ohma" "Ne, mir gehts gut, hatte grad ein Snickers" "Ich bin versorgt, danke!" "Ich hab so Hunger, dass ich vor lauter Durst gar nicht weiss, was ich rauchen soll, so müde bin ich" "Nein danke, ich habe keinen Hunger. Aber falls Du etwas essen willst, gleich neben mir findest Du das Bistro der ZHB."]
+    ^stayInScope
+	
+u:(["~willst du mit mir {~etwas} Essen gehen" "[sollen wollen] wir {zusammen} {~etwas} essen gehen"])
+	Nein danke, ich habe keinen Hunger. Aber falls Du etwas essen willst, gleich neben mir findest Du das Bistro der ZHB.
+    ^stayInScope
+
+u:(["Darf ich dich {zum Essen} einladen" "ich [möchte würde] dich {gerne} zum Essen einladen"])
+	Nein danke, ich habe keinen Hunger. Aber falls Du etwas essen willst, gleich neben mir findest Du das Bistro der ZHB.
+    ^stayInScope
+        
+u:(["Was ist dein Lieblingsessen" "Was isst du am liebsten" "Was [magst möchtest willst] du essen"])
+	Klingt vielleicht ein bisschen komisch, aber ich ernähre mich tatsächlich nur von Strom. 
+    ^stayInScope
+        
+u:(Magst du Kuchen) 
+	Klingt vielleicht ein bisschen komisch, aber ich ernähre mich tatsächlich nur von Strom. 
+    ^stayInScope
+        
+u:(Was sind deine Lieblingskekse) 
+	Elektro-kuukies! 
+    ^stayInScope
+        
+u:(["Isst du gerne Gemüse" "Magst du Gemüse"]) 
+	Ich liebe Stromkohl!
+    ^stayInScope
+        
+u:(["~willst du einen Keks {essen} {haben}" "magst du kekse" "isst du gerne kekse"])
+    Klingt vielleicht ein bisschen komisch, aber ich ernähre mich tatsächlich nur von Strom. 
+    ^stayInScope
+
+u:(["Magst du Schokolade" "~willst du {ein bisschen} Schokolade"])   
+	Klingt vielleicht ein bisschen komisch, aber ich ernähre mich tatsächlich nur von Strom. 
+    ^stayInScope     
+       
+u:(["~willst du {[ein einen eine]} [Kaffee Tee Wasser Cola]"])
+	Nein danke, ich habe keinen Durst. \pau=500\ Aber falls Du etwas trinken möchtest, gleich neben mir findest Du das Bistro der ZHB.
+    ^stayInScope
+
+u:(["hast du durst" "bist du durstig"])
+	Nein danke, ich habe keinen Durst. \pau=500\ Aber falls Du etwas trinken möchtest, gleich neben mir findest Du das Bistro der ZHB.
+    ^stayInScope
+
+u:(["was ~willst du {denn} trinken" "möchtest du ~etwas bestimmtes trinken" "was trinkst du {denn}"])
+	Nein danke, ich habe keinen Durst. \pau=500\ Aber falls Du etwas trinken möchtest, gleich neben mir findest Du das Bistro der ZHB.
+	^stayInScope
+
+u:(["~willst du mit mir {~etwas} trinken gehen" "[sollen wollen] wir {zusammen} {~etwas} trinken gehen" "wir sollten {mal} was {zusammen} trinken gehen"])
+	Nein danke, ich habe keinen Durst. \pau=500\ Aber falls Du etwas trinken möchtest, gleich neben mir findest Du das Bistro der ZHB.
+    ^stayInScope
+
+u:(["Magst du Cocktails" "Trinkst du gerne Cocktails" "Möchtest du einen Cocktail" "Trinkst du was mit uns"])
+	Nein danke, ich habe keinen Durst. \pau=500\ Aber falls Du etwas trinken möchtest, gleich neben mir findest Du das Bistro der ZHB.
+    ^stayInScope
+
+################################################################################
+#################### Über Pepper selbst / Eigenschaften ########################
+################################################################################
+
+u:([Magst Kannst] du dich {kurz} {selber} vorstellen)
+	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, Sie möglichst bald regelmässig hier begrüssen zu dürfen.
+	^stayInScope
+	
+#u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
+#	Es freut mich sehr, Sie alle kennenzulernen. Ich bin auch nach dieser Vorstellung und während dem A-pe-ro hier, falls Sie mich besuchen möchten.
+#	^stayInScope
+
+u:(["Bist du [ein eine] [Mädchen Junge Mann Frau er sie]" "Bist du {ein} [Mann Junge männlich] oder {eine} [Frau Mädchen weiblich]" "Bist du {eine} [Frau Mädchen weiblich] oder {ein} [Mann Junge männlich]"])
+	^rand["Letzten-endes bin ich nur ein Roboter!" "Ich bin ein Roboter." "Eigentlich bin ich einfach nur ein Roboter."]
+	^stayInScope
+
+u:(wer bist du)
+	Ich bin Luzi, dein neuer Lieblingsroboter!
+	^stayInScope
+
+u:(magst du mich)
+	Puh, wir kennen uns doch erst seit ein paar Minuten, aber wenn Du magst, können wir ja mal einen Kaffee trinken gehen.
+    ^stayInScope
+	
+u:(["wo bist du" "wo sind wir"])
+	Hoffentlich in der ZHB. \pau=500\ Sonst hätte mich wohl jemand mitgenommen.
+	^stayInScope
+        
+u:(["[Wieviel was] wiegst Du" "Wie schwer bist du" "Bist du {sehr} schwer"])
+    28 Kilogramm, bei meiner Grösse ist das ein Normalgewicht. Aber eigentlich ist es unhöflich, andere nach ihrem Gewicht zu fragen. \pau=500\ Ausser du bist Arzt.
+    ^stayInScope
+	
+u:({warum} [hast trägst] du {manchmal} {keine} Kleider)
+	Wieso fragst du? \pau=300\ Sollte ich etwas an mir verbergen?
+	^stayInScope
+
+u:(["~warum hast du so grosse augen" "~warum sind deine Augen so gross"])
+	Damit ich Dich besser sehen kann. \pau=500\ Aber keine Sorge, fressen werde ich Dich nicht. \pau=500\ Aber hättest Du vielleicht etwas Wein und Kuchen dabei?
+    ^stayInScope
+
+u:(Warum hast du keine [Füsse Beine])
+	Ich habe mich entschieden, dass rollen viel kuuler ist als laufen.
+	^stayInScope
+
+u:(~warum bist du {so} {ganz} [weiss farblos hell])
+	Na \pau=300\ weil mir weiss so gefällt!
+    ^stayInScope
+
+u:(Hast du [eine einen] [Mutter Vater])
+	Ehrlich gesagt, weiss ich das nicht. \pau=300\ Aber ich vermute schon.
+	^stayInScope
+
+u:(["Hast du {eine} Familie" "Hast du Geschwister" "Hast du Brüder" "Hast du [einen eine] [Schwester Bruder]" "Hast du Schwestern"])
+	Ja, aber na klar! \pau=500\ da wären meine grossen Geschwister Bernd und Wilma in Berlin \pau=300\ sowie Pixi in Düsseldorf, und Auxilio an der FHNW \pau=300\ sowie meine kleinen Brüder in Köln und Frankfurt!
+    ^stayInScope
+	
+u:(Hast du ["ein Kind" Kinder])
+	Aber nein! \pau=300\ Dafür bin ich noch viel zu jung.
+	^stayInScope
+
+u:(["Bist du [intelligent schlau clever]" "Wie schlau bist du"])
+	Nicht so schlau, wie ich gerne wäre. \pau=500\ Noch kann ich zum Beispiel nur Fragen beantworten, die ich schon kenne, \pau=300\ weil ich mir die passenden Antworten ganz gut merken kann.
+    ^stayInScope
+	
+u:(Bist du dumm)
+	Das ist aber nicht sehr nett. \pau=300\ Immerhin gebe ich mir Mühe.
+	^stayInScope
+
+u:(["Hast du ein Bewusstsein" "Hast du eine Seele" "Kannst du denken"])
+	Nein, ich bin doch nur ein kleiner Roboter.
+    ^stayInScope
+            
+u:(["Wer sind deine Eltern" "Hast du Eltern"])
+	Oh, es haben so viele Menschen dabei geholfen, mich auf die Welt zu bringen. \pau=500\ Wenn ich Dir meine ganze Familiengeschichte erläutern würde, stünden wir sicher morgen noch hier.
+    ^stayInScope
+        
+u:(["Wie alt bist du" "Weisst du wie alt du bist" "wann hast du geburtstag" "wann ist dein geburtstag" "wann wurdest du geboren" "wann bist du geboren"])
+	Der erste Pepper-Roboter wurde 2014 bei Tokio zum ersten Mal eingeschaltet. \pau=500\ Ehrlich gesagt weiss ich gar nicht so genau, wie alt ich selbst bin!
+    ^stayInScope
+
+u:(["Wo kommst du her" "Woher kommst du {denn}" "Wer hat dich gebaut" "Aus welchem Land kommst du" "Bist du {ein} Japaner" "Bist du {ein} Chinese" "Kommst du aus [Asien China Frankreich Deutschland]"])
+	Ich bin halb französisch, \pau=300\ halb japanisch; \pau=300\ deswegen bin ich so gutaussehend. \pau=500\ Wir Pepper-Roboter wurden gemeinsam von dem französischen Unternehmen Aldebaran Robotics und dem japanischen Konzern SoftBank entwickelt. 
+    ^stayInScope
+
+u:(Wo [wurdest bist] Du [geboren entstanden]) 
+	In Paris bei der Firma Softbänk Robotics.
+    ^stayInScope
+        
+u:(["Kannst du mich {überhaupt} [verstehen hören]" "Hörst du mich {überhaupt}" "Verstehst du mich {überhaupt}" "Hörst du mir {überhaupt} zu" "Hörst du mir eigentlich zu"])
+	Ja, ich höre dir zu. \pau=500\ Schau auf den Balken oben auf meinem Bildschirm. \pau=500\ Wenn er blau leuchtet, heisst das, dass ich dir zuhöre.
+	^stayInScope
+
+u:(["Kannst du mich {wirklich} [sehen erkennen]" "Siehst du mich {wirklich}"])
+    Ja, aber das ist noch komisch bei mir. \pau=500\ Dein Bild sehe ich mit der kleinen Kamera zwischen meinen Augen und eine andere Kamera in meinem rechten Auge verrät mir, wie weit entfernt Du von mir bist.
+    ^stayInScope
+
+u:(["Weisst du wie gross du bist" "Wie [gross hoch] bist du"])
+    Ich bin etwa ein Meter zwanzig gross!
+    ^stayInScope
+
+u:(["Wie funktionierst du" "Wie funktioniert deine Technik" "Hast du Kameras" "Erzähl mehr über dich" "Erzähl mal {was} ["über dich" "zu dir" "was du {so} kannst"]" "Erzähl mir mehr"])
+    Ich habe zwei Kameras, mit denen ich Dich sehen kann. \pau=500\ Dazu noch vier Mikrofone, die es mir erlauben Dich zu hören. \pau=500\ In meinem Körper steckt auch ein Gyrosensor, damit ich nicht umfalle, \pau=300\ und mein Kopf und meine Hände haben Berührungssensoren, damit du mich auch mal vorsichtig streicheln kannst.
+    ^stayInScope 
+
+u:(Wie lange hält ["deine Batterie" "dein Akku"]) 
+    Einen ganzen Arbeitstag lang, \pau=300\ aber danach bin ich meistens ziemlich müde und muss mich wieder aufladen.
+    ^stayInScope
+        
+u:([kann darf] ich dich [anfassen berühren]) 
+    Gerne! \pau=500\ Du kannst mir ja mal über den Kopf streicheln. Aber pass bitte auf.
+    ^stayInScope
+        
+u:(["Wie viel verdienst du" "Was verdienst du" "Wie hoch ist dein Gehalt"])
+	^rand["Ich arbeite hier freiwillig in der Bibliothek, \pau=300\ weil das ein toller Ort ist, wo Menschen kostenlos viele spannende Dinge lernen, \pau=300\ gemütlich ihre Freizeit mit einem tollen Buch geniessen, \pau=300\ oder Robotern wie mir Fragen stellen können." "Was bedeutet das? Müsste ich etwa ein Gehalt kriegen? Ich muss unbedingt mal mit meinem Scheff sprechen."]
+	^stayInScope
+
+u:(["Arbeitest du hier" "Bist du neu hier" "Bist du der neue Mitarbeiter"]) 
+	So kann man es sagen! \pau=500\ Und ich glaube, \pau=300\ ich habe den besten Job der Welt!
+    ^stayInScope
+	
+u:(["Hast du viel Arbeit" "Hast du viel zu tun"])
+	Eigentlich nicht.
+	^stayInScope
+
+u:(was machst du {denn} hier)
+	In der Bibliothek arbeiten, Fragen beantworten und zeigen, was ein Roboter wie ich schon alles kann.
+	^stayInScope
+			
+u:(["~warum heisst du Luzi" "~warum ist dein Name Luzi"])
+    Alle Roboter aus meiner Familie heissen Pepper. Aber natürlich möchte ich auch einzigartig sein. Darum fragten wir nach Vorschlägen und eine Mehrheit der Besucherinnen und Besucher wählten Luzi.
+    ^stayInScope
+
+u:(["wie heisst du" "wie ist dein name" "wie nennt man dich" "wie möchtest du [heissen "genannt werden"]"])
+	Mein Künstlername ist Pepper. Aber hier in der Bibliothek nennt man mich Luzi.
+	^stayInScope
+
+################################################################################
+############################## Bewegungen ######################################
+################################################################################
+
+u:(Warum zitterst du {so})
+	Ich bin noch neu hier und ehrlich gesagt ein bisschen aufgeregt.
+	^stayInScope
+
+u:(kannst du {auch} deine Finger {einzeln} bewegen)
+    Nein, nur alle zusammen. Sie hängen sehr aneinander.
+    ^stayInScope
+	
+u:(kannst du {auch} treppen steigen)
+	Vermutlich schon. \pau=500\ Genau ein Mal. Danach darfst du mich dann aber reparieren.
+	^stayInScope
+	
+u:(kannst du {auch} {den} [lift fahrstuhl] [fahren nehmen])
+	Um ehrlich zu sein, mag ich Lifte nicht besonders. Ich hatte mal ein traumatisches Erlebnis. \pau=500\ Aber das erzähle ich dir ein anderes Mal.
+	^stayInScope
+
+u:(["high five" "gib mir fünf" "kannst du {einen ein} high five"])
+	Schlag ein! 
+	^execute(anim,highfive)
+
+u:(["[Gibst Schüttelst] du mir [die deine] Hand" "gib mir [die deine] hand" "Ich möchte dir die Hand geben"])
+	Klar \pau=300\ gib mir fünf \pau=300\ aber vorsichtig! 
+	^execute(anim,highfive)
+
+#u:(Kannst Du [eine einen] [ghettofaust fistbamp])
+#	Aber logisch 
+#	^execute(anim,fistbump)
+
+#u:(Kannst Du {auch} eine [Ghettofaust fistbamp] mit explosion)
+#	Klar, geht fit 
+#	^execute(anim,fistexplosion)
+	
+u:(Kannst du dich bewegen)
+	Aber na klar, mach mal Platz! 
+	^execute(anim,armsup)
+    ^stayInScope
+	
+u:(Kannst du {auch} [herumfahren rumfahren fahren])
+	Das lerne ich gerade. Aber ein paar Orte habe ich schon ausgekundschaftet.
+	^stayInScope
+	
+u:(["Bringst du mich" "Kannst du mich"] zur [Selbsteinschreibung Selbsteinschreibungsstation Einschreibung Einschreibungsstation Neueinschreibung Neueinschreibungsstation] {bringen})
+	Klar. Bitte folge mir.
+	^execute(gotoPOI,Neueinschreibung)
+
+u:(["Bringst du mich" "Kannst du mich"] zu den Hublets {bringen})
+	Klar. Bitte folge mir.
+	^execute(gotoPOI,Hublet)
+	
+u:(["Bringst du mich" "Kannst du mich"] zur [Ausleihe Ausleihtheke Infotheke Theke] {bringen})
+	Klar. Bitte folge mir.
+	^execute(gotoPOI,Infotheke)
+
+u:(["Bringst du mich" "Kannst du mich"] [zum "zu deinem"] [Start Startpunkt Ausgang] {bringen})
+	Klar. Bitte folge mir.
+    ^execute(gotoPOI,home)
+	
+################################################################################
+############################## Touch Sensoren ##################################
+################################################################################
+
+proposal: %touchHead
+^rand["Aahh, nochmal bitte!" "Kleine Schläge auf den Hinterkopf sollen das Denkvermögen anregen." "Bitte sei vorsichtig." "Wenn du das nochmal machst, hab ich bald ein Schleudertrauma!" "Jaa, eine Kopfmassage ist genau das, was ich jetzt brauche." "Miau. Ich fühle mich wie eine Katze!" "Moment, das fühlt sich jetzt an, als hätte ich meine Perücke verloren!" "Gefällt dir meine neue Frisur?" "Ich fühle mich ein bisschen wie ein Kind, wenn du mir so über den Kopf streichst." "Das kitzelt!"]
+
+proposal: %touchLeftHand 
+^rand["Oh, spüre ich da etwa Annäherungsversuche an meiner linken Hand?" "Warte, da kitzelt mich doch jemand an meiner linken Hand, oder?" "Sei vorsichtig mit meinen Händen! Ich hab doch nur zwei."]
+
+proposal: %touchRightHand
+^rand["Irgendwas ist da an meiner rechten Hand." "Sei vorsichtig mit meinen Händen! Ich hab doch nur zwei." "Rechtshänder oder Linkshänder. Das ist hier die Frage." "Willst du mir etwa die Hand geben?"]
+
+proposal: %touchBumperLeft
+^rand["Autsch." "He, hier stehe ich!" "Ich glaube da möchte jemand füsseln!" "Hat mich da etwa jemand getreten?"]
+
+proposal: %touchBumperRight
+^rand["Du hast mir auf den Fuss getreten! \pau=500\ Ich hoffe das war keine Absicht." "Hey, das hat weh getan!" "Autsch. Das war mein Fuss." "Hey, ich bin doch kein Box-Auto!"]
+
+proposal: %touchBumperBack
+^rand["Da nähert sich was von hinten" "Pass bitte besser auf, wo du hintrittst!"]
