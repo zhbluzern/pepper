@@ -1,0 +1,10 @@
+proposal: %default
+
+Die Nutzung unserer Bibliothek ist kostenlos. \pau=900\ Du benötigst allerdings eine Switsch-edu-Ei-Die. \pau=900\ Die kannst du unter dem Link auf meinem Täblet erstellen und dann mit der Bibliotheksplattform SLSP verknüpfen. \pau=900\ Mit der edu-Ei-Die können anschliessend alle Services der Bibliothek genutzt werden. \pau=900\ Wenn du möchtest, kannst du dich direkt hier in der Bibliothek für den Katalog einschreiben. \pau=900\ Soll ich dich zur passenden Station bringen?
+
+u:(~ja)
+  %goto_bibliotheksanmeldung-2
+
+u:(~nein)
+  Okay
+    %goto_home
