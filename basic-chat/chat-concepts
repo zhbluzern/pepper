@@ -1,0 +1,29 @@
+topic: ~concepts ()
+
+concept:(hier)[hier "in der Bibliothek" "in der ZHB" "an der ZHB"]
+
+concept:(zhb)[Bibliothek ZHB]
+
+concept:(personen)[Leute Menschen Personen]
+
+concept:(kennstdu) ["Kennst du" "Wer ist" "was weißt du über"]
+
+concept:(notebook)[notebooks ausleihnotebooks "{ein} notebook" "{ein} ausleihnotebook" "{einen} laptop" laptops "{einen} Computer"]
+
+concept:(robotname)[Pepper "kleiner Roboter" du Kleiner]
+
+concept:(ja) [ja "das ist richtig" "ja bitte" "sehr gerne" gerne "ja gerne" klar natürlich]
+
+concept:(nein) ["grade nicht" nein "nein danke" ne "danke nein" "jetzt nicht" "auf {gar} keinen Fall" "lieber nicht" niemals "oh nein"]
+
+concept:(understood) ^rand["Natürlich gerne" "Klaro gerne" "ja sehr gerne" klar natürlich]
+
+concept:(willst)[willst würdest möchtest magst kannst will würde möchte]    
+
+concept:(etwas)[irgendwas irgendetwas etwas was "ein bisschen" "ein wenig"]
+
+concept:(zukunft)[bald demnächst künftig "in Zukunft"]
+
+concept:(wiefindestdu) ["wie findest du" "magst du" "Was hältst du von" "was sagst du zu" "was denkst du über"]
+
+concept:(warum) [warum wieso weshalb "aus welchem Grund"]
