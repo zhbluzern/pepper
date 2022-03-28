@@ -1,0 +1,10 @@
+proposal: %default
+
+Zum Recherchieren, \pau=300\ Erstellen von Dokumenten \pau=300\ oder für die Literaturverwaltung bieten wir ausleihbare Notebooks an. \pau=900\ Die Notebooks kannst du an der Infotheke im Erdgeschoss ausleihen. Du brauchst dafür allerdings einen gültigen Benutzungsausweis. \pau=900\ Soll ich dich zur Infotheke bringen?
+
+u:(~ja)
+	%goto_ausleihnotebooks-2
+
+u:(~nein)
+	Okay
+  %goto_home
