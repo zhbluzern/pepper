@@ -286,7 +286,7 @@ u:(["Erzähl mir {mal} was" "Kannst du Märchen erzählen" "Kannst du Geschichte
     ^stayInScope
 	
 u:(["Erzähl {mir} {mal} [ein einen] Witz" "Hast du [ein einen] Witz {für mich}" "Kennst du {einen} [Witz Witze]"])
-	^rand["\pau=2000\ Nein." "Was hast du, wenn ein Vampir dich gebissen hat? \pau=500\ Eine Schlürfwunde." "Forscher haben letzthin herausgefunden \pau=500\ sind dann aber direkt wieder reingegangen." "Ist dir kalt? \pau=500\ Dann geh dort in die Ecke, dort sind 90 Grad!" "Stiftung Warentest hat Besteck getestet und das Messer hat am besten abgeschnitten." "Mein Scheff hat mir einen guten Tag gewünscht, \pau=500\ also bin ich nach Hause gegangen." "Ich habe ein Huhn und ein Ei bei Amason bestellt. \pau=500\ Ich geb dir Bescheid, was zuerst da war." "Egal wie gut Du fährst, \pau=500\ Züge fahren Güter."]
+	^rand["\pau=2000\ Nein." "Was hast du, wenn ein Vampir dich gebissen hat? \pau=500\ Eine Schlürfwunde." "Forscher haben letzthin herausgefunden \pau=500\ sind dann aber direkt wieder reingegangen." "Ist dir kalt? \pau=500\ Dann geh dort in die Ecke, dort sind 90 Grad!" "Stiftung Warentest hat Besteck getestet und das Messer hat am besten abgeschnitten." "Mein Scheff hat mir einen guten Tag gewünscht, \pau=500\ also bin ich nach Hause gegangen." "Ich habe ein Huhn und ein Ei bei Amason bestellt. \pau=500\ Ich geb dir Bescheid, was zuerst da war." "Egal wie gut Du fährst, \pau=500\ Züge fahren Güter." "Wie heisst ein Hund auf französisch? \pau=1000\ La Bello" "Was ist rot und kämpft sich durch den Salat? \pau=1000\ Ein Rambodies-chen"]
 	^stayInScope
 
 u:([["Dankeschön" Danke "Vielen Dank"] {dir} {Pepper Luzi}])
