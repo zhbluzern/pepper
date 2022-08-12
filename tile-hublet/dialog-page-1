@@ -1,7 +1,6 @@
 proposal: %default
 
-Die Habblet-Station im Katalogsaal bietet ausleihbare Täbblets mit Zugriff auf Elektronische Tages- und Wochenzeitungen, \pau=300\ das Filmportal „filmfrend“ \pau=300\ und die Onleihe mit einem grossen Angebot an Ih-Books, \pau=300\ Zeitschriften und Zeitungen.
-Wenn du möchtest, kannst du dich direkt hier in der Bibliothek für den Katalog einschreiben. \pau=900\ Soll ich dich zu den Habblets bringen?
+Die Habblet-Station im Katalogsaal bietet ausleihbare Täbblets mit Zugriff auf Elektronische Tages- und Wochenzeitungen, \pau=300\ das Filmportal „filmfrend“ \pau=300\ und die Onleihe mit einem grossen Angebot an Ih-Books, \pau=300\ Zeitschriften und Zeitungen. Ich kann dir gerne zeigen, wo du die Habblets findest. \pau=900\ Soll ich dorthin bringen?
 
 u:(~ja)
   %goto_hublet-2
