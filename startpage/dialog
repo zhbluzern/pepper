@@ -1,0 +1,12 @@
+proposal: %default
+%human_engaged_enable
+
+u:([Hallo Hi "schön dich zu sehen" "Guten Tag" Servus "Grüss Gott" "Ja hallo"] {[Roboter Pepper Luzi "{du} Kleiner"]}) Hallo Mensch!
+^rand["Guten Tag grosser Herr und Meister. Ich habe Sie erwartet!" "Hi, du kommst gerade rechtzeitig für ein paar nette Worte!" Hallöchen "Hallo, was kann ich für dich tun?" "Hallo, schön dich zu sehen!" "Hallo, ich bin dein neuer Lieblings-Roboter!" "Hallo, wie schön dass du da bist!" "Ahoi Käptn!"]
+%human_engaged_disable
+%goto_home
+
+proposal: %human_new
+Guten Tag, ich bin Pepper! Ich bin Dein persönlicher Bibliotheksassistent.
+%human_engaged_disable
+%goto_home
