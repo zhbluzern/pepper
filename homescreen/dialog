@@ -1,49 +1,12 @@
 proposal: %default
 
-^first["^exist(intro) ^rand["Worüber darf ich dir jetzt erzählen?" "gibt es noch etwas, was du wissen möchtest?" "was interessiert dich noch?" "Hast du noch eine Frage?" "Möchtest du noch etwas wissen?"] "
+^first["^exist(intro) ^rand["Worüber darf ich dir jetzt erzählen?" "gibt es noch etwas, was du wissen möchtest?" "was interessiert dich noch?" "Hast du noch eine Frage?" "Möchtest du noch etwas wissen?"]"
 	"Hallo! \pau=300\ Schön, dass du mich besuchen kommst. \pau=300\ Ich heiße Lucy und beantworte nur zu gerne alle deine Fragen. \pau=300\ Was möchtest du wissen? $intro=1"]
 
 u:(Kannst Du [eine einen] [ghettofaust "ghetto faust" fistbamp])
-  Klar, mit oder ohne Explosion?
+	Klar, mit oder ohne Explosion?
     u1:(["mit Explosion" mit Explosion]) ^execute(anim,fistexplosion)
     u1:(["ohne Explosion" ohne]) ^execute(anim,fistbump)
     u1:(e:Dialog/NotUnderstood) Mit oder ohne Explosion?
 
-u:(["[wo wie] kann ich mich {für die [~zhb bibliotheksnutzung]} [anmelden einschreiben]" "[wo wie] bekomme ich einen {bibliotheks} Ausweis" "ich möchte mich {für die bibliothek} [anmelden einschreiben]" einschreibung]) 
-  %goto_bibliotheksanmeldung
-    
-u:({wie funktioniert die} selbstausleihe)
-  %goto_selbstausleihe
-
-u:({wie komme ich ins} [internet "w-lan {nutzung}" "wie kann ich das internet nutzen"])
-  %goto_wlan
-
-u:({mobile} buchscanner)
-  %goto_scannen
-
-u:(["Wo kann ich {~hier} {etwas} [kopieren scannen "Scans machen" "Kopien machen"]" "[hat gibt] es {~hier} {einen} {buch} [Scanner Kopierer]" "ich [möchte will muss] [etwas was "ein dokument" "eine seite"] [ausdrucken drucken scannen kopieren]" drucken kopieren scannen])
-  %goto_drucken
-
-u:(["24 7" "{24 7 {und} } standorte"])
-  %goto_standorte
-
-u:({was ist ein} hablet)
-  %goto_hublet
-
-u:([ausleihnotebooks "wo bekomme ich ~notebook" "wo kann ich ~notebook ausleihen" ~notebook "[könnte kann] ich {mir} {hier} [einen ein] ~notebook ausleihen" "gibt es ~hier ausleihbare ~notebook" "ich brauche [einen ein] ~notebook"])
-  %goto_ausleihnotebooks
-
-u:({was [kann ist] {der}} [sieht seat] navigator)
-  %goto_seat-navigator
-
-u:({wo ["gibt es" "finde ich" sind] {hier} } {die} gruppenarbeitsräume)
-  %goto_gruppenarbeitsraeume
-
-u:(["über mich" "über dich"])
-  %goto_pepper
-
-u:(["Medien suchen" Mediensuche "ich suche ein buch"]) 
-  ^execute(launchApp,cl9s.pepper.app.searchassistant:cmsAccount.zhb;cmsProject.sa-bilingual;language.de)
-
-u:(Spass mit [Pepper Luzi Papa Mama]) 
-  %goto_entertainment
+u:(["Medien suchen" Mediensuche "ich suche ein buch"]) ^execute(launchApp,cl9s.pepper.app.searchassistant:cmsAccount.zhb;cmsProject.sa-bilingual;language.de)
