@@ -1,0 +1,21 @@
+proposal: %default
+
+Folge dem Link auf der linken Seite, in dem Du diesen abtippst oder den QR-Code mit Deinem Smartphone scannst. \pau=900\
+
+Auf der sich öffnenden Registrierungsseite tippst Du Deinen Vor- und Deinen Nachnamen ein. \pau=900\
+
+Anschliessend gibst Du Deine E-Mail-Adresse ein. \pau=900\
+
+Nun wählst Du ein Passwort und tippst dieses zur Bestätigung ein zweites Mal ein. \pau=900\
+
+Tippe die eingeblendeten Zeichen so ab, wie sie angezeigt werden. \pau=900\
+
+Setzte den Haken, um die Nutzungsbedingungen der switsch edu eidi zu akzeptieren und klicke auf \pau=400\ Benutzerkonto erstellen
+
+Ging Dir das zu schnell? Dann tippe auf zurück. \pau=900\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter
+
+u:(zurück)
+	%goto_bibliotheksanmeldung-4
+
+u:(weiter)
+	%goto_bibliotheksanmeldung-5
