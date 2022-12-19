@@ -1,0 +1,3 @@
+proposal: %default
+
+^first["^exist(intro) ^rand["Gibt es weitere Angebote, zu denen ich dir etwas erzählen darf?" "Gibt es noch etwas, zu dem du mehr wissen möchtest?" "Was interessiert dich noch?"]" "Zu welchem unserer Angebote möchtest du gerne mehr erfahren? $intro=1"]
