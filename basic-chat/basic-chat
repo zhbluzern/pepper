@@ -721,12 +721,13 @@ u:(["Magst du Cocktails" "Trinkst du gerne Cocktails" "Möchtest du einen Cockta
 ################################################################################
 
 u:([Magst Kannst] du dich {kurz} {selber} vorstellen)
-	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, Sie möglichst bald regelmässig hier begrüssen zu dürfen.
+	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch möglichst bald regelmässig hier begrüssen zu dürfen.
 	^stayInScope
 	
-#u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
-#	Es freut mich sehr, Sie alle kennenzulernen. Ich bin auch nach dieser Vorstellung und während dem A-pe-ro hier, falls Sie mich besuchen möchten.
-#	^stayInScope
+u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
+	Es hat mich sehr gefreut, euch zu sehen! Besucht mich mal wieder!
+    	^execute(anim,waving1)
+	^stayInScope
 
 u:(["Bist du [ein eine] [Mädchen Junge Mann Frau er sie]" "Bist du {ein} [Mann Junge männlich] oder {eine} [Frau Mädchen weiblich]" "Bist du {eine} [Frau Mädchen weiblich] oder {ein} [Mann Junge männlich]"])
 	^rand["Letzten-endes bin ich nur ein Roboter!" "Ich bin ein Roboter." "Eigentlich bin ich einfach nur ein Roboter."]
