@@ -6,4 +6,12 @@ Super, dann folge mir bitte.
 
 proposal: %presentPOI
 	Hier sind wir!
-	%goto_home
+    
+Ich kann Dir Schritt für Schritt zeigen, wie die Einschreibung funktioniert. \pau=900\ Möchtest Du das?
+
+u:(ja)
+	%goto_bibliotheksanmeldung-3
+
+u:(nein)
+	Alles klar, dann sieh doch zu, wie Du allein klarkommst.
+    %goto_home
