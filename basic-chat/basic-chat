@@ -9,6 +9,8 @@ u:(hast du eine testfrage)
 
 u:(["Gibt es hier ["Arbeitsräume für Gruppen" Gruppenarbeitsräume Gruppenräume "Räume für Gruppen"]" "["ich möchte" "Wie kann ich"] einen Gruppenarbeitsraum buchen" "wo kann ich {~hier} mit meiner gruppe lernen" "wie {kann} {reserviere} ich einen gruppenraum {reservieren}"])
 	%goto_gruppenarbeitsraeume
+    
+u:(["24 7" "{24 7 {und} } standorte"]) %goto_standorte
 	
 u:(wo sind {hier} {die} [Medien Bücher])
 	Die findest du hier überall. Am besten gehst du zwischen Ausleihtheke und Lesesaal vorbei in das Freihandmagazin. Dort findest du auf vier Stockwerken Bücher und Medien aller Art. Im Untergeschoss findest du sogar besonders alte und wertvolle Bücher. Und im Katalogsaal bei der Ausleihtheke findest du die aktuellsten Zeitschriften oder auch Sonderausstellungen. Das ist aber noch nicht alles. In der Speicherbibliothek in Büron bewahren wir die meisten unserer Bücher auf. Die kannst du ganz einfach via swiss-ckowerii RZS bestellen.
@@ -67,9 +69,16 @@ u:(["[Hat Gibt] es {~hier} ["eine Garderobe" Schliessfächer] {~hier}" "wo ["gib
 
 u:(["{wie} kann ich {~hier} [Bücher "ein Buch" Medien etwas was] ausleihen" Ausleihe])
 	%goto_selbstausleihe
+    
+u:({mobile} buchscanner) %goto_scannen
+    
+u:({wie funktioniert die} selbstausleihe) %goto_selbstausleihe
 	
 u:([Kannst Würdest] du mich einschreiben)
-	%goto_selbstausleihe
+	%goto_bibliotheksanmeldung
+    
+u:(["[wo wie] kann ich mich {für die [~zhb bibliotheksnutzung]} [anmelden einschreiben]" "[wo wie] bekomme ich einen {bibliotheks} Ausweis" "ich möchte mich {für die bibliothek} [anmelden einschreiben]" einschreibung]) 
+	%goto_bibliotheksanmeldung
 
 u:(["[hat gibt] es {~hier} {auch} [Filme DVDs Blu-Rays]" "{wie} kann [man ich] {~hier} {auch} [Filme Blu-Rays DVDs] ausleihen"])
 	Die ZHB hat einen Sammlungsauftrag als Kantonsbilbliothek, \pau=300\ sowie einen als Wissensversorger im Kanton Luzern. \pau=300\ Die Unterhaltung ist dabei nur eine kleine Sparte und Filme finden sich daher nur wenige im Bestand. \pau=300\ Aber wir haben das Portal Filmfriend für dich lizensiert. Das findest du auf unserer Webseite oder hier an einem Hablet. \pau=500\ In Luzern gibt es zudem verschiedene Bibliotheken mit grosser Filmauswahl. \pau=300\ Zum Beispiel die Stadtbibliothek Luzern und die Mediothek der Hochschule Luzern Soziale Arbeit.
@@ -119,7 +128,20 @@ u:(Kann ich ~hier {auch} bücher {[aus von]} der Stadtbibliothek zurückgegeben)
 ########################## ZHB Angebote - Weiteres #############################
 ################################################################################
 
-u:(Ich bin neu hier.)
+u:({wie komme ich ins} [internet "w-lan {nutzung}" "wie kann ich das internet nutzen"]) %goto_wlan
+
+u:(["Wo kann ich {~hier} {etwas} [kopieren scannen "Scans machen" "Kopien machen"]" "[hat gibt] es {~hier} {einen} {buch} [Scanner Kopierer]" "ich [möchte will muss] [etwas was "ein dokument" "eine seite"] [ausdrucken drucken scannen kopieren]" drucken kopieren scannen])
+	%goto_drucken
+    
+u:({was ist ein} hablet) %goto_hublet
+
+u:([ausleihnotebooks "wo bekomme ich ~notebook" "wo kann ich ~notebook ausleihen" ~notebook "[könnte kann] ich {mir} {hier} [einen ein] ~notebook ausleihen" "gibt es ~hier ausleihbare ~notebook" "ich brauche [einen ein] ~notebook"]) %goto_ausleihnotebooks
+
+u:({was [kann ist] {der}} [sieht seat] navigator) %goto_seat-navigator
+
+u:({wo ["gibt es" "finde ich" sind] {hier} } {die} gruppenarbeitsräume) %goto_gruppenarbeitsraeume
+
+u:(Ich bin neu {hier}.)
 	Hallo und herzlich willkommen bei uns! Schön \pau=300\ dass du uns gefunden hast.
 	^stayInScope
 
@@ -238,12 +260,14 @@ u:(["wo ist" "habt ihr"] [ein einen der das] {[buch bücher]} [flohmarkt antiqua
 	^stayInScope
 	
 ################################################################################
-############################## searchAssistant #################################
+############################## searchAssistant / Dritt-Apps ####################
 ################################################################################
 
 u:(["[Medien Buch Bücher] [suchen finden]" Mediensuche "ich suche [ein eine einen] [buch film cd]" "wie [finde suche] ich ["ein buch" bücher medien filme cds]" "wie kann ich ["ein buch" bücher medien filme cds] [suchen finden]"])
 	Ich kann dir gerne bei der Suche in unserem Katalog behilflich sein. Bitte warte einen kurzen Moment.
 	^execute(launchApp,cl9s.pepper.app.searchassistant:cmsAccount.zhb;cmsProject.sa-bilingual;language.de)
+    
+u:(Spass mit [Pepper Luzi Papa Mama]) %goto_entertainment
 
 ################################################################################
 ############################## Standard-Chat ###################################
@@ -585,7 +609,9 @@ u:(["[was wie] sind die Öffnungszeiten der Sondersammlung" "Wann [ist hat] die 
 ################################################################################
 ######################### Roboter / KI / Chatbots ##############################
 ################################################################################
-        
+     
+u:(["über mich" "über dich"]) %goto_pepper
+     
 u:(["Was weisst du über Tschätbotts" "Definiere Tschättbott" "Was sind Tschättbots" "Was ist ein Tschättbot"])
 	Laut Wikipedia sind Tschätbotts textbasierte Dialogsysteme, die das Chatten mit einem technischen System erlauben. \pau=500\ Technisch sind sie wohl näher mit einer Volltextsuchmaschine verwandt als mit 			künstlicher oder gar natürlicher Intelligenz. \pau=500\ Oft haben sie auch ziemlich lustige Namen! 
     ^stayInScope
