@@ -720,22 +720,21 @@ u:(["Magst du Cocktails" "Trinkst du gerne Cocktails" "Möchtest du einen Cockta
 #################### Über Pepper selbst / Eigenschaften ########################
 ################################################################################
 
-u:([Magst Kannst] du dich {kurz} {selber} vorstellen)
+u:([Magst Kannst] du dich {kurz} {gleich} {selber} vorstellen)
 	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch möglichst bald regelmässig hier begrüssen zu dürfen.
 	^stayInScope
 	
 u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
 	Es hat mich sehr gefreut, euch zu sehen! Besucht mich mal wieder!
-    	^execute(anim,waving1)
+    ^execute(anim,waving1)
 	^stayInScope
 
 u:(["Bist du [ein eine] [Mädchen Junge Mann Frau er sie]" "Bist du {ein} [Mann Junge männlich] oder {eine} [Frau Mädchen weiblich]" "Bist du {eine} [Frau Mädchen weiblich] oder {ein} [Mann Junge männlich]"])
 	^rand["Letzten-endes bin ich nur ein Roboter!" "Ich bin ein Roboter." "Eigentlich bin ich einfach nur ein Roboter."]
 	^stayInScope
 
-u:(wer bist du)
-	Ich bin Luzi, dein neuer Lieblingsroboter!
-	^stayInScope
+u:("[wer was] bist du" "was weisst du über Roboter" "[kannst magst möchtest] du [mir uns] etwas über roboter erzählen")
+	%goto_pepper
 
 u:(magst du mich)
 	Puh, wir kennen uns doch erst seit ein paar Minuten, aber wenn Du magst, können wir ja mal einen Kaffee trinken gehen.
@@ -802,7 +801,7 @@ u:(["Wo kommst du her" "Woher kommst du {denn}" "Wer hat dich gebaut" "Aus welch
     ^stayInScope
 
 u:(Wo [wurdest bist] Du [geboren entstanden]) 
-	In Paris bei der Firma Softbänk Robotics.
+	In Paris bei der Firma Aldebaran.
     ^stayInScope
         
 u:(["Kannst du mich {überhaupt} [verstehen hören]" "Hörst du mich {überhaupt}" "Verstehst du mich {überhaupt}" "Hörst du mir {überhaupt} zu" "Hörst du mir eigentlich zu"])
@@ -822,7 +821,7 @@ u:(["Wie funktionierst du" "Wie funktioniert deine Technik" "Hast du Kameras" "E
     ^stayInScope 
 
 u:(Wie lange hält ["deine Batterie" "dein Akku"]) 
-    Einen ganzen Arbeitstag lang, \pau=300\ aber danach bin ich meistens ziemlich müde und muss mich wieder aufladen.
+    Einen ganzen Arbeitstag lang, \pau=300\ aber danach bin ich meistens ziemlich müde und muss mich wieder aufladen. Also ziemlich ähnlich wie bei Menschen.
     ^stayInScope
         
 u:([kann darf] ich dich [anfassen berühren]) 
@@ -846,7 +845,7 @@ u:(was machst du {denn} hier)
 	^stayInScope
 			
 u:(["~warum heisst du Luzi" "~warum ist dein Name Luzi"])
-    Alle Roboter aus meiner Familie heissen Pepper. Aber natürlich möchte ich auch einzigartig sein. Darum fragten wir nach Vorschlägen und eine Mehrheit der Besucherinnen und Besucher wählten Luzi.
+    Alle Roboter aus meiner Familie heissen Pepper. Aber natürlich möchte ich auch einzigartig sein. Darum fragten wir nach Vorschlägen und eine Mehrheit der Besucherinnen und Besucher wählte Luzi.
     ^stayInScope
 
 u:(["wie heisst du" "wie ist dein name" "wie nennt man dich" "wie möchtest du [heissen "genannt werden"]"])
