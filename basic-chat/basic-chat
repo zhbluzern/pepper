@@ -1,8 +1,5 @@
 topic: ~basicchannel ()
 
-u:(hast du eine testfrage)
-	Nein, \pau=300\ da waren meine Entwickler leider zu doooof dafür. \pau=500\ Sorry. Boot \pau=500\ Booot \pau=500\ Boooot.
-
 ################################################################################
 ############################## ZHB als Ort #####################################
 ################################################################################
@@ -53,10 +50,6 @@ u:([Kann Darf] ich hier {auch} {[etwas was]} [essen {und} trinken])
 
 u:(["Wo ["gibt es" "finde ich"] ["einen Arbeitsplatz" Arbeitsplätze]" "Gibt es hier {irgendwo} {auch} {freie} Arbeitsplätze" "Wo ["gibt es" "finde ich"] einen freien {Arbeits} Platz"	"Ich suche einen {[freien ruhigen]} Platz {zum Lernen}" "Wo kann ich hier {ungestört} lernen"])
 	Unter \pau=300\ rauminfo punkt zhbluzern punkt ch \pau=300\ finden sich alle Arbeits- und Lernplätze aller ZHB Standorte. \pau=500\ Jeder Sitzplatz ist mit einem Sensor ausgestattet, der in Echtzeit anzeigt, ob 	 der Platz noch frei, besetzt oder nur vorübergehend für eine Pause verlassen wurde. \pau=500\ Dementsprechend wird er dir dann als grün, rot oder gelb angezeigt.
-	^stayInScope
-	
-u:(["Wer sind die ~personen auf ["den [Fotos Portraits Bildern]" "der Bildergalerie"] der ~zhb" "Welche ~personen sind auf den {ganzen} Bildern in der ~zhb zu sehen" "Was ist das für eine Portraitgalerie" "was sind das für bilder an der wand" "Was hat es mit den Portraits in der ~zhb auf sich"])
-	Die Portrais-Galerie der Korporationsgemeinde Luzern im Katalogsaal der ZHB zeigt 260 Portraits merkwürdiger Luzernerinnen und Luzerner, \pau=300\ das heisst bedeutender Luzerner Persönlichkeiten, die sich durch hervorragende Leistungen in den Bereichen Wirtschaft, \pau=300\ Wissenschaft, \pau=300\ Kultur oder Soziales ausgezeichnet haben. \pau=500\ Etwa alle vier Jahre wird diese Galerie durch ein neues Porträt bereichert. \pau=500\ Initiiert wurde die Sammlung vom Luzerner Ratsherrn und Historiker Joseph Anton Felix Balthasar.
 	^stayInScope
 	
 u:(["[Hat Gibt] es {~hier} ["eine Garderobe" Schliessfächer] {~hier}" "wo ["gibt es ~hier" "finde ich" ist sind] {die} [Schliessfächer Garderobe]"])
@@ -125,6 +118,32 @@ u:(Kann ich ~hier {auch} bücher {[aus von]} der Stadtbibliothek zurückgegeben)
 	^stayInScope
 
 ################################################################################
+######################### ZHB Angebote - Führungen #############################
+################################################################################
+
+u:([Magst Kannst] du dich {kurz} {gleich} {selber} vorstellen)
+	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch möglichst bald regelmässig hier begrüssen zu dürfen.
+	^stayInScope
+
+u:(["Wo [ist "finde ich" "befindet sich"] die Diebold Schilling Chronik" "Kann ich die Diebold Schilling Chronik einsehen" "{"Was ist die" "Was weisst du über die"} Diebold Schilling Chronik"])
+	%goto_chronik
+    
+u:(["[wer was] bist du" "was weisst du über Roboter" "[kannst magst möchtest] du [mir uns] etwas über roboter erzählen"])
+	%goto_pepper
+
+u:(["Was ist {die} [SLSP "swiss library service platform"]" "Wofür steht SLSP" "Gehört die [ZHB Bibliothek] zu SLSP" "Was ist eine SLSP Bibliothek" "Was [ist bedeutet] swisscovery" "[Was Wofür] [ist bedeutet] {die} Switsch edu-ID"])
+	%goto_about-swisscovery
+
+u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
+	Es hat mich sehr gefreut, euch zu sehen! Besucht mich mal wieder!
+    ^execute(anim,waving1)
+	^stayInScope
+    
+u:(["Wer sind die ~personen auf ["den [Fotos Portraits Bildern]" "der Bildergalerie"] der ~zhb" "Welche ~personen sind auf den {ganzen} Bildern in der ~zhb zu sehen" "Was ist das für eine Portraitgalerie" "was sind das für bilder an der wand" "Was hat es mit den Portraits in der ~zhb auf sich"])
+	Die Portrais-Galerie der Korporationsgemeinde Luzern im Katalogsaal der ZHB zeigt 260 Portraits merkwürdiger Luzernerinnen und Luzerner, \pau=300\ das heisst bedeutender Luzerner Persönlichkeiten, die sich durch hervorragende Leistungen in den Bereichen Wirtschaft, \pau=300\ Wissenschaft, \pau=300\ Kultur oder Soziales ausgezeichnet haben. \pau=500\ Etwa alle vier Jahre wird diese Galerie durch ein neues Porträt bereichert. \pau=500\ Initiiert wurde die Sammlung vom Luzerner Ratsherrn und Historiker Joseph Anton Felix Balthasar.
+	^stayInScope
+
+################################################################################
 ########################## ZHB Angebote - Weiteres #############################
 ################################################################################
 
@@ -155,10 +174,6 @@ u:(["gibt es {hier} {auch} klassenführungen" "[bietet bieten] ["die ~zhb" ihr s
 
 u:(["Was [bedeutet ist] {die} Onleihe" "wo [findet gibt finde] [man es ich] {die} Onleihe" "was [bedeutet heisst ist] dibizentral"])
 	Onleihe meint eigentlich eine Kombination von Online und Ausleihe. Bei E-Medien handelt es sich dabei um eine zeitlich begrenzte Nutzung. Bei unserer Onleihe "DibiZentral" können E-Books z.B. während 21 Tagen gelesen werden. 
-	^stayInScope
-
-u:(["Was ist {die} [SLSP "swiss library service platform"]" "Wofür steht SLSP" "Gehört die [ZHB Bibliothek] zu SLSP" "Was ist eine SLSP Bibliothek"])
-	SLSP steht für Swiss Library Service Platform und bedeutet einen Zusammenschluss von über 475 Bibliotheken aus der ganzen Schweiz. \pau=500\ Mit nur einer Anmeldung und einem Bibliotheksausweis können dank SLSP nun Bibliotheken in Zürich, Sankt Gallen, Bern, Basel und natürlich auch hier in Luzern an der ZHB genutzt werden. \pau=500\ Mit dem SLSP Kurier kann auch landesweit jedes Buch innerhalb von 48 Stunden hier an die ZHB bestellt werden.
 	^stayInScope
 
 u:(["Wie [kann macht mache] [man ich] einen [Medienwunsch Kaufvorschlag Anschaffungsvorschlag] {machen}" "{Wie} kann ich {der Bibliothek} ein {bestimmtes} Buch zum Kauf vorschlagen"])
@@ -219,10 +234,6 @@ u:(["Welche Nachlässe gibt es ~hier" "wo ["finde ich" sind "befinden sich"] die
 
 u:(["Wie kann ich in der {ZHB} Sondersammlung recherchieren" "Wo ist die {ZHB} Sondersammlung {der ~zhb}"])
 	Die Onlein-Kataloge zur Recherche in unserer Sondersammlung sind auf unserer Website verlinkt.
-	^stayInScope
-
-u:(["Wo [ist "finde ich" "befindet sich"] die Diebold Schilling Chronik" "Kann ich die Diebold Schilling Chronik einsehen"])
-	Die Diebold-Schilling-Chronik ist digitalisiert und seit 2015 auf E-Codices online für alle einsehbar. \pau=500\ Das Original wird in der ZHB Luzern aufbewahrt, \pau=300\ ist aber Eigentum der Korporationsgemeinde Luzern.
 	^stayInScope
 
 u:([W-Lan "[Hat Gibt] es {~hier} W-Lan {~hier}" "Wie kann ich mich ins W-Lan [einwählen einloggen]" "[gibt hat] es ~hier ["[kostenloses öffentliches] Internet" "einen {[kostenlosen öffentlichen freien]} Internetzugang"]" "Wie [sind heisst heissen lauten lautet] ["das Passwort" "die Zugangsdaten"] für {das} W-Lan" "Wie komme ich ~hier ins [Internet W-Lan]"]) 
@@ -613,7 +624,7 @@ u:(["[was wie] sind die Öffnungszeiten der Sondersammlung" "Wann [ist hat] die 
 u:(["über mich" "über dich"]) %goto_pepper
      
 u:(["Was weisst du über Tschätbotts" "Definiere Tschättbott" "Was sind Tschättbots" "Was ist ein Tschättbot"])
-	Laut Wikipedia sind Tschätbotts textbasierte Dialogsysteme, die das Chatten mit einem technischen System erlauben. \pau=500\ Technisch sind sie wohl näher mit einer Volltextsuchmaschine verwandt als mit 			künstlicher oder gar natürlicher Intelligenz. \pau=500\ Oft haben sie auch ziemlich lustige Namen! 
+	Laut Wikipedia sind Tschätbotts textbasierte Dialogsysteme, die das Chatten mit einem technischen System erlauben. \pau=500\ Technisch sind sie wohl näher mit einer Volltextsuchmaschine verwandt als mit künstlicher oder gar natürlicher Intelligenz. \pau=500\ Oft haben sie auch ziemlich lustige Namen! 
     ^stayInScope
     
 u:(Bist du ein Tschätbott) 
@@ -720,21 +731,9 @@ u:(["Magst du Cocktails" "Trinkst du gerne Cocktails" "Möchtest du einen Cockta
 #################### Über Pepper selbst / Eigenschaften ########################
 ################################################################################
 
-u:([Magst Kannst] du dich {kurz} {gleich} {selber} vorstellen)
-	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch möglichst bald regelmässig hier begrüssen zu dürfen.
-	^stayInScope
-	
-u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
-	Es hat mich sehr gefreut, euch zu sehen! Besucht mich mal wieder!
-    ^execute(anim,waving1)
-	^stayInScope
-
 u:(["Bist du [ein eine] [Mädchen Junge Mann Frau er sie]" "Bist du {ein} [Mann Junge männlich] oder {eine} [Frau Mädchen weiblich]" "Bist du {eine} [Frau Mädchen weiblich] oder {ein} [Mann Junge männlich]"])
 	^rand["Letzten-endes bin ich nur ein Roboter!" "Ich bin ein Roboter." "Eigentlich bin ich einfach nur ein Roboter."]
 	^stayInScope
-
-u:("[wer was] bist du" "was weisst du über Roboter" "[kannst magst möchtest] du [mir uns] etwas über roboter erzählen")
-	%goto_pepper
 
 u:(magst du mich)
 	Puh, wir kennen uns doch erst seit ein paar Minuten, aber wenn Du magst, können wir ja mal einen Kaffee trinken gehen.
