@@ -140,8 +140,7 @@ u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
 	^stayInScope
     
 u:(["Wer sind die ~personen auf ["den [Fotos Portraits Bildern]" "der Bildergalerie"] der ~zhb" "Welche ~personen sind auf den {ganzen} Bildern in der ~zhb zu sehen" "Was ist das für eine Portraitgalerie" "was sind das für bilder an der wand" "Was hat es mit den Portraits in der ~zhb auf sich"])
-	Die Portrais-Galerie der Korporationsgemeinde Luzern im Katalogsaal der ZHB zeigt 260 Portraits merkwürdiger Luzernerinnen und Luzerner, \pau=300\ das heisst bedeutender Luzerner Persönlichkeiten, die sich durch hervorragende Leistungen in den Bereichen Wirtschaft, \pau=300\ Wissenschaft, \pau=300\ Kultur oder Soziales ausgezeichnet haben. \pau=500\ Etwa alle vier Jahre wird diese Galerie durch ein neues Porträt bereichert. \pau=500\ Initiiert wurde die Sammlung vom Luzerner Ratsherrn und Historiker Joseph Anton Felix Balthasar.
-	^stayInScope
+	%goto_portraits
 
 ################################################################################
 ########################## ZHB Angebote - Weiteres #############################
