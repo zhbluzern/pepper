@@ -5,5 +5,5 @@ Super, dann folge mir bitte.
 ^execute(gotoPOI,Hublet)
 
 proposal: %presentPOI
-  Hier sind wir!
-  %goto_home
+	  Hier sind wir!
+    %goto_service
