@@ -10,7 +10,7 @@ u:(["Gibt es hier ["Arbeitsräume für Gruppen" Gruppenarbeitsräume Gruppenräu
 u:(["24 7" "{24 7 {und} } standorte"]) %goto_standorte
 	
 u:(wo sind {hier} {die} [Medien Bücher])
-	Die findest du hier überall. Am besten gehst du zwischen Ausleihtheke und Lesesaal vorbei in das Freihandmagazin. Dort findest du auf vier Stockwerken Bücher und Medien aller Art. Im Untergeschoss findest du sogar besonders alte und wertvolle Bücher. Und im Katalogsaal bei der Ausleihtheke findest du die aktuellsten Zeitschriften oder auch Sonderausstellungen. Das ist aber noch nicht alles. In der Speicherbibliothek in Büron bewahren wir die meisten unserer Bücher auf. Die kannst du ganz einfach via swiss-ckowerii RZS bestellen.
+	Die findest du hier überall. Am besten gehst du zwischen Ausleihtheke und Lesesaal vorbei in das Freihandmagazin. Dort findest du auf vier Stockwerken Bücher und Medien aller Art. Im Untergeschoss findest du sogar besonders alte und wertvolle Bücher. Und im Katalogsaal bei der Ausleihtheke findest du die aktuellsten Zeitschriften oder auch Sonderausstellungen. Das ist aber noch nicht alles. In der Speicherbibliothek in Büron bewahren wir die meisten unserer Bücher auf. Die kannst du ganz einfach via swiss-koweri RZS bestellen.
 	^stayInScope
 	
 u:(wo ist ["der freihandbereich" "das freihandmagazin"])
@@ -106,7 +106,7 @@ u:(["Wie lange kann ich Bücher ausleihen" "Wann muss ich die Bücher zurückgeb
 	^stayInScope
 
 u:(["Wie kann ich Bücher verlängern" "Meine Leihfrist ist abgelaufen was kann ich tun" "Wie funktioniert die Verlängerung von Büchern" "was mache ich wenn meine leihfrist abgelaufen ist"])
-	Falls das Medium die maximale Zahl der Leihfristverlängerungen noch nicht erreicht hat und es für das Medium keine Vormerkungen gibt, \pau=300\ kann es direkt onlein in deinem persönlichen Bibliothekskonto verlängert werden. \pau=500\ Das Log-in fürs Bibliothekskonto findet sich auf unserem Rechercheportal swiss-ckowerii RZS oben rechts unter Anmelden.
+	Falls das Medium die maximale Zahl der Leihfristverlängerungen noch nicht erreicht hat und es für das Medium keine Vormerkungen gibt, \pau=300\ kann es direkt onlein in deinem persönlichen Bibliothekskonto verlängert werden. \pau=500\ Das Log-in fürs Bibliothekskonto findet sich auf unserem Rechercheportal swiss-koweri RZS oben rechts unter Anmelden.
 	^stayInScope
 
 u:(["[wie wo] kann ich {~hier} {meine} {ausgeliehenen} Bücher zurückgeben" "wie funktioniert die {bücher} Rückgabe {von [büchern medien]}"])
@@ -121,20 +121,20 @@ u:(Kann ich ~hier {auch} bücher {[aus von]} der Stadtbibliothek zurückgegeben)
 ######################### ZHB Angebote - Führungen #############################
 ################################################################################
 
-u:([Magst Kannst] du dich {kurz} {gleich} {selber} vorstellen)
+u:(["[Magst Kannst] du dich {kurz} {gleich} {selber} {selbst} vorstellen" "{Am} {besten} stellst du dich {gleich} selbst vor" "Stell dich {doch} {mal} vor"])
 	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch möglichst bald regelmässig hier begrüssen zu dürfen.
 	^stayInScope
 
-u:(["Wo [ist "finde ich" "befindet sich"] die Diebold Schilling Chronik" "Kann ich die Diebold Schilling Chronik einsehen" "{"Was ist die" "Was weisst du über die"} Diebold Schilling Chronik"])
+u:(["Wo [ist "finde ich" "befindet sich"] die {Diebold} {Schilling} Chronik" "Kann ich die {Diebold} {Schilling} Chronik einsehen" "["Was ist die" "Was weisst du über die" "Was weisst du zur"] {Diebold} {Schilling} Chronik" "Kannst du {uns} etwas {zur} {über} {die} {Diebold} {Schilling} Chronik sagen"])
 	%goto_chronik
     
 u:(["[wer was] bist du" "was weisst du über Roboter" "[kannst magst möchtest] du [mir uns] etwas über roboter erzählen"])
 	%goto_pepper
 
-u:(["Was ist {die} [SLSP "swiss library service platform"]" "Wofür steht SLSP" "Gehört die [ZHB Bibliothek] zu SLSP" "Was ist eine SLSP Bibliothek" "Was [ist bedeutet] swisscovery" "[Was Wofür] [ist bedeutet] {die} Switsch edu-ID"])
+u:(["Was ist {die} ["S L S P" "SLSP" "swiss library service platform"]" "Wofür steht SLSP" "Gehört die ~zhb zu SLSP" "Was ist eine SLSP Bibliothek" "Was [ist bedeutet] swisskovery" "[Was Wofür] [ist bedeutet] {die} [Switch Switsch] {edu} ID" "Was weisst du über {die} [Switch Switsch] {edu} ID"])
 	%goto_about-swisscovery
 
-u:([Magst Möchtest] du zum [Abschied Schluss Abschluss] {noch} etwas sagen)
+u:("[Magst Möchtest Willst] du zum [Abschied Schluss Abschluss] {noch} etwas sagen" "Sagst du {auch} {noch} Tschüss")
 	Es hat mich sehr gefreut, euch zu sehen! Besucht mich mal wieder!
     ^execute(anim,waving1)
 	^stayInScope
@@ -238,7 +238,7 @@ u:(["Wie kann ich in der {ZHB} Sondersammlung recherchieren" "Wo ist die {ZHB} S
 u:([W-Lan "[Hat Gibt] es {~hier} W-Lan {~hier}" "Wie kann ich mich ins W-Lan [einwählen einloggen]" "[gibt hat] es ~hier ["[kostenloses öffentliches] Internet" "einen {[kostenlosen öffentlichen freien]} Internetzugang"]" "Wie [sind heisst heissen lauten lautet] ["das Passwort" "die Zugangsdaten"] für {das} W-Lan" "Wie komme ich ~hier ins [Internet W-Lan]"]) 
 	%goto_wlan
 
-u:(["Ich [kenne weiss] [mein meine] ["Log-in-daten" Passwort Zugangsdaten Kontodaten] nicht {mehr}" "Ich habe [mein meine die das] [Passwort Zugangsdaten Login-Daten] {für mein Bibliothekskonto} vergessen" "Wie kann ich mich in swisscovery anmelden" "Wie kann ich mich onlein in mein Bibliothekskonto einloggen"])
+u:(["Ich [kenne weiss] [mein meine] ["Log-in-daten" Passwort Zugangsdaten Kontodaten] nicht {mehr}" "Ich habe [mein meine die das] [Passwort Zugangsdaten Login-Daten] {für mein Bibliothekskonto} vergessen" "Wie kann ich mich in swisskoweri anmelden" "Wie kann ich mich onlein in mein Bibliothekskonto einloggen"])
 	Sofern Du Dich bereits für die Nutzung unserer Bibliothek angemeldet hast, entspricht Dein Loginname Deiner E-Mail-Adresse. \pau=500\ Solltest Du Dein Passwort vergessen haben, kannst Du es auf unserer Webseite zurücksetzen.
 	^stayInScope
 
@@ -251,7 +251,7 @@ u:(Was [ist bedeutet] Open Access)
     ^stayInScope
 
 u:([Wo Wie] [findet finde] [man ich] Open Access [Publikationen Medien])
-	Open Access Publikationen findet man in swiss-ckowerii sowie in den meisten Fachdatenbanken. Einige Suchinstrumente, zum Beispiel swiss-ckowerii, verfügen über einen Open Access-Filter, über den Suchresultate gezielt auf frei zugängliche Titel eingeschränkt werden können. Dazu gibt es spezielle Open Access-Suchmaschinen wie die Bielefeld Search Engine BASE, die Open Access-Plattformen durchsucht. BASE umfasst über 240 Millionen Dokumente.
+	Open Access Publikationen findet man in swiss-koweri sowie in den meisten Fachdatenbanken. Einige Suchinstrumente, zum Beispiel swiss-koweri, verfügen über einen Open Access-Filter, über den Suchresultate gezielt auf frei zugängliche Titel eingeschränkt werden können. Dazu gibt es spezielle Open Access-Suchmaschinen wie die Bielefeld Search Engine BASE, die Open Access-Plattformen durchsucht. BASE umfasst über 240 Millionen Dokumente.
     ^stayInScope
 
 u:(Was ist ein Repositorium)
