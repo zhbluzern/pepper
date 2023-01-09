@@ -1,0 +1,11 @@
+proposal: %default
+
+Auf der sich öffnenden Registrierungsseite tippst Du Deinen Vor- und Deinen Nachnamen ein. \pau=1500\ Anschliessend gibst Du Deine E-Mail-Adresse ein. \pau=1500\ Nun wählst Du ein Passwort und tippst dieses zur Bestätigung ein zweites Mal ein. \pau=1500\ Tippe die eingeblendeten Zeichen so ab, wie sie angezeigt werden. \pau=1500\ Setzte den Haken, um die Nutzungsbedingungen der Switsch-edu-Ei-Die zu akzeptieren und klicke auf \pau=500\ Benutzerkonto erstellen. \pau=500\
+
+Ging Dir das zu schnell? \pau=500\ Dann tippe auf zurück. \pau=500\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter.
+
+u:(zurück)
+	%goto_bibliotheksanmeldung-4a
+
+u:(weiter)
+	%goto_bibliotheksanmeldung-5
