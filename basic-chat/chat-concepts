@@ -2,7 +2,7 @@ topic: ~concepts ()
 
 concept:(hier)[hier "in der Bibliothek" "in der ZHB" "an der ZHB"]
 
-concept:(zhb)[Bibliothek ZHB]
+concept:(zhb)[Bibliothek ZHB Zentralbibliothek Hochschulbibliothek]
 
 concept:(personen)[Leute Menschen Personen]
 
@@ -11,7 +11,6 @@ concept:(kennstdu) ["Kennst du" "Wer ist" "was weißt du über"]
 concept:(notebook)[notebooks ausleihnotebooks "{ein} notebook" "{ein} ausleihnotebook" "{einen} laptop" laptops "{einen} Computer"]
 
 concept:(robotname)[Pepper "kleiner Roboter" du Kleiner]
-
 concept:(ja) [ja "das ist richtig" "ja bitte" "sehr gerne" gerne "ja gerne" klar natürlich]
 
 concept:(nein) ["grade nicht" nein "nein danke" ne "danke nein" "jetzt nicht" "auf {gar} keinen Fall" "lieber nicht" niemals "oh nein"]
