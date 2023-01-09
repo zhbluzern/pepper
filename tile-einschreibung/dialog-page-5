@@ -1,16 +1,8 @@
 proposal: %default
 
-Wechsel nun in den Posteingang Deines imehl-Kontos. Das kannst Du über Dein Smartphone erledigen oder über den Browser an unserer Neueinschreibungsstation. \pau=900\
+Wechsel nun in den Posteingang Deines E-Mail-Kontos. Das kannst Du über Dein Smartphone erledigen oder über den Browser an unserer Neueinschreibungsstation. \pau=500\ In Deinem Posteingang sollte sich eine E-Mail mit dem Betreff Switsch-edu-Ei-Die Verifizierung E-Mail-Adresse befinden. \pau=500\ Klicke den Bestätigungslink in der E-Mail an. \pau=500\ Nun kommst Du zu einem Anmeldefenster. \pau=500\ Gib hier Deine E-Mail-Adresse und Dein gewähltes Passwort ein und klicke auf Logg-in. \pau=500\ Herzlichen Glückwunsch, Du hast nun ein Switsch-edu-Ei-Die Konto und kannst mit dem nächsten Schritt fortfahren. \pau=500\
 
-In Deinen Posteingang sollte sich eine imehl mit dem Betreff switsch edu eidi Verzifizierung imehl-Adresse. \pau=900\
-
-Klicke den Bestätigungslink in der E-Mail an. \pau=900\
-
-Nun kommst Du zu einem Anmeldefenster. \pau=400\ Gib hier Deine E-Mail-Adresse und Dein gewähltes Passwort ein und klicke auf Lock-in.
-
-Herzlichen Glückwunsch, Du hast nun ein switsch edu eidi Konto und kannst mit dem nächsten Schritt fortfahren. \pau=900\
-
-Ging Dir das zu schnell? Dann tippe auf zurück. \pau=900\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter
+Ging Dir das zu schnell? \pau=500\ Dann tippe auf zurück. \pau=500\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter.
 
 u:(zurück)
 	%goto_bibliotheksanmeldung-5
