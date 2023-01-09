@@ -1,6 +1,6 @@
 proposal: %default
 
-Die Neueinschreibung ist kostenlos. \pau=900\ Du benötigst eine E-Mail-Adresse, Zugriff auf Deinen Posteingang sowie eine switsch edu EiDi. Hast Du bereits eine SWITCH edu-ID?
+Die Neueinschreibung ist kostenlos. \pau=500\ Du benötigst eine E-Mail-Adresse, \pau=300\ Zugriff auf Deinen Posteingang \pau=300\ sowie eine Switsch-edu-Ei-Die. \pau=500\ Hast Du bereits eine Switsch-edu-Ei-Die?
 
 u:(ja)
 	%goto_bibliotheksanmeldung-6
