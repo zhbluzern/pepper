@@ -14,4 +14,4 @@ u:(ja)
 
 u:(nein)
 	Alles klar, dann sieh doch zu, wie Du allein klarkommst.
-    %goto_home
+    	%goto_home
