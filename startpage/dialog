@@ -7,6 +7,6 @@ u:([Hallo Hi "schön dich zu sehen" "Guten Tag" Servus "Grüss Gott" "Ja hallo"]
 %goto_home
 
 proposal: %human_new
-Guten Tag, ich bin Pepper! Ich bin Dein persönlicher Bibliotheksassistent.
+Guten Tag, ich bin Lucy! \pau=500\ Schön, dass du mich besuchen kommst. \pau=500\ Ich bin Dein persönlicher Bibliotheksassistent und beantworte nur zu gerne alle deine Fragen. \pau=500\ Was möchtest du wissen?
 %human_engaged_disable
 %goto_home
