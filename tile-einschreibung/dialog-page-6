@@ -1,19 +1,11 @@
 proposal: %default
 
-Folge dem Link auf der linken Seite, in dem Du diesen abtippst oder den QR-Code mit Deinem Smartphone scannst. \pau=900\
+Folge dem angegebenen Link, indem Du einen Browser auf unserer Neueinschreibungstation öffnest und den Link in die Adresszeile eintippst. \pau=500\ Alternativ kannst Du den QR-Code mit der Kamera Äpp auf Deinem Smartphone einscannen. \pau=500\ Anschliessend solltest Du die Registrierungsseite von swiss-koweri sehen. \pau=500\ 
 
-Auf der sich öffnenden Registrierungsseite klicke auf Registrierung starten. \pau=900\
-
-Du wirst nun gefragt, ob die Bibliotheksplattform swisscovery auf deine switsch edu eidi zugreifen darf. Bestätige dies, in dem Du auf akzeptieren klickst.\pau=900\
-
-Du siehst nun eine Meldung, dass es weitere Angaben in Deinem edu eidi-Konto braucht. Dazu zählt insbesondere Dein Geburtsdatum, die Angabe einer Adresse und einer Telefonnummer. Klicke einen der drei Links an \pau=900\
-
-Ergänze nun in Deinem switsch edu eidi Konto Geburtstdatum, eine Telefonnummer und eine Adresse. \pau=900\ Klicke anschliessend auf Fortfahren \pau=900\
-
-Ging Dir das zu schnell? Dann tippe auf zurück. \pau=900\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter
+Ging Dir das zu schnell? \pau=500\ Dann tippe auf zurück. \pau=500\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter.
 
 u:(zurück)
 	%goto_bibliotheksanmeldung-6
 
 u:(weiter)
-	%goto_bibliotheksanmeldung-7
+	%goto_bibliotheksanmeldung-6a
