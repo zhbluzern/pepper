@@ -1,7 +1,3 @@
 proposal: %default
 
-Der Sieht Navigator zeigt genau an, \pau=300\ wo es in der Bibliothek freie Plätze gibt. \pau=900\ Freie Plätze sind grün markiert. \pau=900\ Rot markierte Plätze sind belegt. \pau=900\ Und wenn Plätze gelb markiert sind, heißt das, \pau=300\ dass sie nur vorübergehend für eine Pause verlassen wurden. \pau=900\ Scanne einfach den QR-Code auf meinem Täbblet! \pau=900\ Dann musst du nie wieder lange suchen, sondern kannst freie Plätze direkt ansteuern.
-
-\pau=3000\
-
-%goto_home
+Der Sieht Navigator zeigt genau an, wo es in der Bibliothek freie Plätze gibt. \pau=500\ Freie Plätze sind grün markiert. \pau=500\ Rot markierte Plätze sind belegt. \pau=500\ Und wenn Plätze gelb markiert sind, heißt das, \pau=300\ dass sie nur vorübergehend für eine Pause verlassen wurden. \pau=500\ Scanne einfach den QR-Code auf meinem Täbblet! \pau=500\ Dann musst du nie wieder lange suchen, sondern kannst freie Plätze direkt ansteuern.
