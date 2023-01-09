@@ -1,0 +1,11 @@
+proposal: %default
+
+Klicke auf \pau=500\ Registrierung starten \pau=500\ und logge Dich mit Deiner Switsch-edu-Ei-Die ein. \pau=500\ Anschliessend klickst Du auf \pau=500\ Akzeptieren \pau=500\, um die persönlichen Daten in Deiner Switsch-edu-Ei-Die für die Erstellung eines Bibliothekskontos zu verwenden. \pau=500\ Für die Erstellung eines Bibliothekskontos muss Deine Switsch-edu-Ei-Die ein Geburtstdatum, \pau=300\ eine mobile, private oder geschäftliche Telefonnummer \pau=300\ sowie eine private oder geschäftliche Postanschrift enthalten. \pau=500\ Sollte eine dieser Angaben in Deiner Switsch-edu-Ei-Die fehlen, wird Dir eine entsprechende Meldung angezeigt. \pau=500\ Mit einem Klick auf die Meldung kannst Du die fehlenden Angaben Deiner Switsch-edu-Ei-Die hinzufügen. \pau=500\
+
+Ging Dir das zu schnell? \pau=500\ Dann tippe auf zurück. \pau=500\ Bist Du bereit für den nächsten Schritt, dann tippe auf weiter.
+
+u:(zurück)
+	%goto_bibliotheksanmeldung-6a
+
+u:(weiter)
+	%goto_bibliotheksanmeldung-7
