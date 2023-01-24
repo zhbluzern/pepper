@@ -25,7 +25,7 @@ u:([Kann Darf] ich {hier} einen [Arbeitsplatz Platz] reservieren)
 	Reservieren kannst du nur Gruppenarbeitsräume. Auf unserem Siitnavigator siehst du aber \pau=300\ wo im Moment ein Arbeitsplatz für dich frei wäre.
 	%goto_seat-navigator
 
-u:(["Was ist {der} Seat Navigator" "[Hat Gibt] es {noch} freie [Plätze Arbeitsplätze]"])
+u:(["Was ist {der} Seat Navigator" "[Hat Gibt] es {hier} {noch} freie [Plätze Arbeitsplätze]"])
 	%goto_seat-navigator
 
 u:(Ist die ~zhb [behindertengerecht "für Rollstuhlfahrer geeignet" barrierefrei rollstullgängig]) 
@@ -122,7 +122,7 @@ u:(Kann ich ~hier {auch} bücher {[aus von]} der Stadtbibliothek zurückgegeben)
 ################################################################################
 
 u:(["[Magst Kannst] du dich {kurz} {gleich} {selber} {selbst} vorstellen" "{Am} {besten} stellst du dich {gleich} selbst vor" "Stell dich {doch} {mal} vor"])
-	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch möglichst bald regelmässig hier begrüssen zu dürfen.
+	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch heute einen Einblick geben zu können, was Roboter wie ich alles können und wo wir manchmal auch echt überfordert sind.
 	^stayInScope
 
 u:(["Wo [ist "finde ich" "befindet sich"] die {Diebold} {Schilling} Chronik" "Kann ich die {Diebold} {Schilling} Chronik einsehen" "["Was ist die" "Was weisst du über die" "Was weisst du zur"] {Diebold} {Schilling} Chronik" "Kannst du {uns} etwas {zur} {über} {die} {Diebold} {Schilling} Chronik sagen"])
@@ -134,7 +134,12 @@ u:(["[wer was] bist du" "was weisst du über Roboter" "[kannst magst möchtest] 
 u:(["Was ist {die} ["S L S P" "SLSP" "swiss library service platform"]" "Wofür steht SLSP" "Gehört die ~zhb zu SLSP" "Was ist eine SLSP Bibliothek" "Was [ist bedeutet] swisskovery" "[Was Wofür] [ist bedeutet] {die} [Switch Switsch] {edu} ID" "Was weisst du über {die} [Switch Switsch] {edu} ID"])
 	%goto_about-swisscovery
 
-u:("[Magst Möchtest Willst] du zum [Abschied Schluss Abschluss] {noch} etwas sagen" "Sagst du {auch} {noch} Tschüss")
+u:(["Was ist Rapido" "was meinst du zu Rapido" "was hältst du von rapido"])
+	Oh nein \pau=500\ bitte frag mich bloss nicht danach
+    ^execute(anim,annoyed)
+    ^stayInScope
+
+u:(["[Magst Möchtest Willst] du zum [Abschied Schluss Abschluss] {noch} etwas sagen" "Sagst du {auch} {noch} Tschüss"])
 	Es hat mich sehr gefreut, euch zu sehen! Besucht mich mal wieder!
     ^execute(anim,waving1)
 	^stayInScope
