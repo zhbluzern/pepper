@@ -1,0 +1,154 @@
+proposal: %default
+\pau=800\
+
+Lass uns loslegen. \pau=800\   ^enableThenGoto(titel)
+
+proposal: %titel ^rand["Möchtest du mir einen Titel nennen?" "Hast du einen Titel für mich?" "Kennst du den Namen des Buches?"]
+	u1:(~zurück) Okay. %goto_selectPage
+	u1:(~nein) Kein Problem, dann zur nächsten Frage. ^enableThenGoto(autor)
+	u1:(~ja) ^rand["Wie heißt denn das Buch?" "Bitte nenne mir den Titel des Buches!" "Wie ist denn der Name des Buches?" "nach welchem Titel suchst du?"]
+		u2:(["ich habe keinen titel" "ich kenne den titel nicht" "ich kenne keinen titel" "weiß ich nicht" "ich weiß es nicht"]) Okay, dann zur nächsten Frage! ^enableThenGoto(autor)
+		u2:({[er sie "das buch"] heißt} _* ) Okay! $title=$1 %evaluate
+			Du suchst nach dem Buch $title . \pau=500\ ^rand["Habe ich das richtig verstanden?" "Stimmt das?" "Ist das richtig?"]
+			u3:(~ja) super. \pau=500\ ^enableThenGoto(autor)
+			u3:(~nein) Möchtest du mir den Titel buchstabieren?
+				u4:(~ja) %resetTitle
+					Okay, bitte sprich langsam. \pau=500\ Wenn ich einen Buchstaben falsch verstanden habe, sag \pau=300\ zurück \pau=300\ . Wenn du den Titel vollständig buchstabiert hast, sag \pau=300\ fertig. \pau=300\ Also leg los!
+					u5:(a) a $letter=a %spellTitle ^stayInScope
+					u5:(b) b $letter=b %spellTitle ^stayInScope
+					u5:(c) c $letter=c %spellTitle ^stayInScope
+					u5:(d) d $letter=d %spellTitle ^stayInScope
+					u5:(e) e $letter=e %spellTitle ^stayInScope
+					u5:(f) f $letter=f %spellTitle ^stayInScope
+					u5:(g) g $letter=g %spellTitle ^stayInScope
+					u5:(h) h $letter=h %spellTitle ^stayInScope
+					u5:(i) i $letter=i %spellTitle ^stayInScope
+					u5:(j) j $letter=j %spellTitle ^stayInScope
+					u5:(k) k $letter=k %spellTitle ^stayInScope
+					u5:(l) l $letter=l %spellTitle ^stayInScope
+					u5:(m) m $letter=m %spellTitle ^stayInScope
+					u5:(n) n $letter=n %spellTitle ^stayInScope
+					u5:(o) o $letter=o %spellTitle ^stayInScope
+					u5:(p) p $letter=p %spellTitle ^stayInScope
+					u5:(q) q $letter=q %spellTitle ^stayInScope
+					u5:(r) r $letter=r %spellTitle ^stayInScope
+					u5:(s) s $letter=s %spellTitle ^stayInScope
+					u5:(t) t $letter=t %spellTitle ^stayInScope
+					u5:(u) u $letter=u %spellTitle ^stayInScope
+					u5:(v) v $letter=v %spellTitle ^stayInScope
+					u5:(w) w $letter=w %spellTitle ^stayInScope
+					u5:(x) x $letter=x %spellTitle ^stayInScope
+					u5:(y)  y $letter=y %spellTitle ^stayInScope
+					u5:(z) z $letter=z %spellTitle ^stayInScope
+					u5:(ä) ä $letter=ä %spellTitle ^stayInScope
+					u5:(ö) ö $letter=ö %spellTitle ^stayInScope
+					u5:(ü) ü $letter=ü %spellTitle ^stayInScope
+					u5:(ß) ß $letter=ß %spellTitle ^stayInScope
+					u5:(leerzeichen) $letter=space %spellTitle ^stayInScope
+					u5:(zurück) $letter=reset %spellTitle ^stayInScope
+					u5:(fertig) Super, danke! ^enableThenGoto(autor)
+				
+				u4:(~nein) Soll ich den Titel trotzdem speichern oder verwerfen? 
+					u5:([nutzen speichern "benutz ihn {trotzdem}"]) okay! weiter gehts. ^enableThenGoto(autor)
+					u5:(["nicht nutzen" verwerfen löschen]) wird gemacht! %resetTitle ^enableThenGoto(autor)
+					u5:(e:Dialog/NotUnderstood) Bitte antworte mit speichern oder verwerfen. ^stayInScope
+
+proposal: %autor Möchtest du nach einem bestimmten Autor oder einer bestimmten Autorin suchen?
+	u1:(e:Dialog/NotUnderstood) Bitte antworte mit ja oder nein. ^stayInScope
+	u1:([zurück "nochmal das letzte" "nochmal zum Titel"]) Okay. ^enableThenGoto(titel)
+	u1:(~nein) Okay, nächste Frage. ^enableThenGoto(thema)
+	u1:(~ja) Wie heißt denn der Autor oder die Autorin?
+		u2:(["ich habe {doch} keinen autor" "ich kenne den autor {doch} nicht" "ich kenne den namen des autors nicht"]) 
+			Okay, dann zur nächsten Frage! ^enableThenGoto(thema)
+		u2:({[er sie "der Autor" "die Autorin"] heißt} _* ) Okay, $author=$1 %evaluate
+			Du suchst nach $author . \pau=500\ ^rand["Habe ich das richtig verstanden?" "Stimmt das?" "Ist das richtig?"]
+			u3:(~ja) super. ^enableThenGoto(thema)
+			u3:(~nein) Möchtest du mir den Namen des Autors oder der Autorin buchstabieren?
+				u4:(~ja) %resetAuthor
+					Okay, bitte sprich langsam. \pau=500\ Wenn ich einen Buchstaben falsch verstanden habe, sag \pau=300\ zurück \pau=300\ . Wenn du den Namen vollständig buchstabiert hast, sag \pau=300\ fertig \pau=300\. Also leg los!
+					u5:(a) a $letter=a %spellAuthor ^stayInScope
+					u5:(b) b $letter=b %spellAuthor ^stayInScope
+					u5:(c) c $letter=c %spellAuthor ^stayInScope
+					u5:(d) d $letter=d %spellAuthor ^stayInScope
+					u5:(e) e $letter=e %spellAuthor ^stayInScope
+					u5:(f) f $letter=f %spellAuthor ^stayInScope
+					u5:(g) g $letter=g %spellAuthor ^stayInScope
+					u5:(h) h $letter=h %spellAuthor ^stayInScope
+					u5:(i) i $letter=i %spellAuthor ^stayInScope
+					u5:(j) j $letter=j %spellAuthor ^stayInScope
+					u5:(k) k $letter=k %spellAuthor ^stayInScope
+					u5:(l) l $letter=l %spellAuthor ^stayInScope
+					u5:(m) m $letter=m %spellAuthor ^stayInScope
+					u5:(n) n $letter=n %spellAuthor ^stayInScope
+					u5:(o) o $letter=o %spellAuthor ^stayInScope
+					u5:(p) p $letter=p %spellAuthor ^stayInScope
+					u5:(q) q $letter=q %spellAuthor ^stayInScope
+					u5:(r) r $letter=r %spellAuthor ^stayInScope
+					u5:(s) s $letter=s %spellAuthor ^stayInScope
+					u5:(t) t $letter=t %spellAuthor ^stayInScope
+					u5:(u) u $letter=u %spellAuthor ^stayInScope
+					u5:(v) v $letter=v %spellAuthor ^stayInScope
+					u5:(w) w $letter=w %spellAuthor ^stayInScope
+					u5:(x) x $letter=x %spellAuthor ^stayInScope
+					u5:(y)  y $letter=y %spellAuthor ^stayInScope
+					u5:(z) z $letter=z %spellAuthor ^stayInScope
+					u5:(ä) ä $letter=ä %spellAuthor ^stayInScope
+					u5:(ö) ö $letter=ö %spellAuthor ^stayInScope
+					u5:(ü) ü $letter=ü %spellAuthor ^stayInScope
+					u5:(ß) ß $letter=ß %spellAuthor ^stayInScope
+					u5:(leerzeichen) $letter=space %spellAuthor ^stayInScope
+					u5:(zurück) $letter=reset %spellAuthor ^stayInScope
+					u5:(fertig) Super, danke! ^enableThenGoto(thema)
+				
+				u4:(~nein) Soll ich den Autor nutzen oder verwerfen? 
+					u5:(speichern) okay!  ^enableThenGoto(thema)
+					u5:(verwerfen) wird gemacht! %resetAuthor ^enableThenGoto(thema)
+
+proposal: %thema Suchst du auch nach einem bestimmten Thema?
+	u1:(e:Dialog/NotUnderstood) Bitte antworte erst mit ja oder nein. ^stayInScope
+	u1:([zurück "nochmal das letzte" "nochmal zum Autor"]) Okay. ^enableThenGoto(autor)
+	u1:(~nein) Okay, dann weiter zur Auswertung. \pau=500\ Einen Moment bitte! %search
+	u1:(~ja) 	Wie lautet denn das Thema, das du suchst?
+		u2:(ich habe doch kein thema) Okay, dann gleich zur Auswertung! \pau=500\ Gib mir ein paar Sekunden! %search
+		u2:({das Thema [ist heißt lautet]} _* ) $topic=$1 %evaluate
+			
+			Du suchst nach $topic . \pau=500\ ^rand["Habe ich das richtig verstanden?" "Stimmt das?" "Ist das richtig?"]
+			u3:(~ja) super. \pau=500\ Lass mich kurz nachdenken. %search
+			u3:(~nein) Möchtest du mir das Thema buchstabieren?
+				u4:(~ja) %resetTopic
+					Okay, bitte sprich langsam. \pau=500\ Wenn ich einen Buchstaben falsch verstanden habe, sag \pau=300\ zurück \pau=300\ . Wenn du das Thema vollständig buchstabiert hast, sag \pau=300\ fertig \pau=300\ . Also leg los!
+					u5:(a) a $letter=a %spellTopic ^stayInScope
+					u5:(b) b $letter=b %spellTopic ^stayInScope
+					u5:(c) c $letter=c %spellTopic ^stayInScope
+					u5:(d) d $letter=d %spellTopic ^stayInScope
+					u5:(e) e $letter=e %spellTopic ^stayInScope
+					u5:(f) f $letter=f %spellTopic ^stayInScope
+					u5:(g) g $letter=g %spellTopic ^stayInScope
+					u5:(h) h $letter=h %spellTopic ^stayInScope
+					u5:(i) i $letter=i %spellTopic ^stayInScope
+					u5:(j) j $letter=j %spellTopic ^stayInScope
+					u5:(k) k $letter=k %spellTopic ^stayInScope
+					u5:(l) l $letter=l %spellTopic ^stayInScope
+					u5:(m) m $letter=m %spellTopic ^stayInScope
+					u5:(n) n $letter=n %spellTopic ^stayInScope
+					u5:(o) o $letter=o %spellTopic ^stayInScope
+					u5:(p) p $letter=p %spellTopic ^stayInScope
+					u5:(q) q $letter=q %spellTopic ^stayInScope
+					u5:(r) r $letter=r %spellTopic ^stayInScope
+					u5:(s) s $letter=s %spellTopic ^stayInScope
+					u5:(t) t $letter=t %spellTopic ^stayInScope
+					u5:(u) u $letter=u %spellTopic ^stayInScope
+					u5:(v) v $letter=v %spellTopic ^stayInScope
+					u5:(w) w $letter=w %spellTopic ^stayInScope
+					u5:(x) x $letter=x %spellTopic ^stayInScope
+					u5:(y)  y $letter=y %spellTopic ^stayInScope
+					u5:(z) z $letter=z %spellTopic ^stayInScope
+					u5:(ä) ä $letter=ä %spellTopic ^stayInScope
+					u5:(ö) ö $letter=ö %spellTopic ^stayInScope
+					u5:(ü) ü $letter=ü %spellTopic ^stayInScope
+					u5:(ß) ß $letter=ß %spellTopic ^stayInScope
+					u5:(leerzeichen) $letter=space %spellTopic ^stayInScope
+					u5:(zurück) $letter=reset %spellTopic ^stayInScope
+					u5:(fertig) Super, danke! \pau=700\ Lass mich kurz überlegen. %search
+				
+				u4:(~nein) %resetTopic Okay, dann schauen wir uns mal die Auswertung an! \pau=500\ Lass mich einen Moment überlegen. %search
