@@ -1,0 +1,52 @@
+proposal: %default
+#%resetTitle %resetTopic %resetAuthor
+\pau=800\
+
+Wie heißt denn der Autor oder die Autorin, nach der du suchen möchtest?
+		u1:(["ich suche {gar} [nichts "keinen Autor" "keine Autorin"]" "Ich [will möchte] {gerade} {[überhaupt gar]} [nichts "keinen Autor" "keine Autorin" "kein Buch"] suchen"]) Oh, das hab ich dann wohl falsch verstanden. ^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+		
+		u1:(["Suche beenden" "{zurück} zur Übersicht" "beende die suche"])
+			^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+		
+		u1:({geh} {nochmal} zurück {bitte}) %goto_normalSearch
+
+		u1:({["der autor" der die sie "die autorin" er] heißt} _* ) 
+			$author=$1 %evaluate Du suchst nach  $author . \pau=500\ Stimmt das?
+			u2:(~ja) super. \pau=500\ Lass mich einen Moment überlegen. %search
+			u2:(~nein) Möchtest du mir den Namen buchstabieren?
+				u3:(~ja) %resetAuthor
+					Okay, bitte sprich langsam. \pau=500\ Wenn ich einen Buchstaben falsch verstanden habe, sag \pau=300\ zurück \pau=300\ . Wenn du den Namen vollständig buchstabiert hast, sag \pau=300\ fertig \pau=300\. Also leg los!
+					u4:(a) a $letter=a %spellAuthor ^stayInScope
+					u4:(b) b $letter=b %spellAuthor ^stayInScope
+					u4:(c) c $letter=c %spellAuthor ^stayInScope
+					u4:(d) d $letter=d %spellAuthor ^stayInScope
+					u4:(e) e $letter=e %spellAuthor ^stayInScope
+					u4:(f) f $letter=f %spellAuthor ^stayInScope
+					u4:(g) g $letter=g %spellAuthor ^stayInScope
+					u4:(h) h $letter=h %spellAuthor ^stayInScope
+					u4:(i) i $letter=i %spellAuthor ^stayInScope
+					u4:(j) j $letter=j %spellAuthor ^stayInScope
+					u4:(k) k $letter=k %spellAuthor ^stayInScope
+					u4:(l) l $letter=l %spellAuthor ^stayInScope
+					u4:(m) m $letter=m %spellAuthor ^stayInScope
+					u4:(n) n $letter=n %spellAuthor ^stayInScope
+					u4:(o) o $letter=o %spellAuthor ^stayInScope
+					u4:(p) p $letter=p %spellAuthor ^stayInScope
+					u4:(q) q $letter=q %spellAuthor ^stayInScope
+					u4:(r) r $letter=r %spellAuthor ^stayInScope
+					u4:(s) s $letter=s %spellAuthor ^stayInScope
+					u4:(t) t $letter=t %spellAuthor ^stayInScope
+					u4:(u) u $letter=u %spellAuthor ^stayInScope
+					u4:(v) v $letter=v %spellAuthor ^stayInScope
+					u4:(w) w $letter=w %spellAuthor ^stayInScope
+					u4:(x) x $letter=x %spellAuthor ^stayInScope
+					u4:(y) y $letter=y %spellAuthor ^stayInScope
+					u4:(z) z $letter=z %spellAuthor ^stayInScope
+					u4:(ä) ä $letter=ä %spellAuthor ^stayInScope
+                    u4:(ö) ö $letter=ö %spellAuthor ^stayInScope
+                    u4:(ü) ü $letter=ü %spellAuthor ^stayInScope
+                    u4:(ß) ß $letter=ß %spellAuthor ^stayInScope
+					u4:(leerzeichen) $letter=space %spellAuhtor ^stayInScope
+					u4:(zurück) $letter=reset %spellAuthor ^stayInScope
+					u4:(fertig) Super, danke! Ich bin dann mal Suchen! %search
+				u3:(~nein) Okay, dann lass es uns anders versuchen. %resetAuthor %goto_selectPage
