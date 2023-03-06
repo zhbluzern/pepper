@@ -1,0 +1,53 @@
+proposal: %default
+#%resetTitle %resetTopic %resetAuthor
+
+\pau=800\
+^rand["Wie lautet das Thema, nach dem du suchen möchtest?" "Nach welchem Thema möchtest du suchen?" "Nach welchem Thema soll ich suchen?"]
+	u1:(["Suche beenden" "{zurück} zur Übersicht" "beende die suche"]) Was immer du möchtest!
+			^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+		
+	u1:({geh} {nochmal} zurück {bitte}) %goto_normalSearch
+
+	u1:(["ich suche {gar} [nichts "kein Buch"]" "Ich [will möchte] {gerade} {[überhaupt gar]} kein Buch suchen"]) Oh, das hab ich dann wohl falsch verstanden. ^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+
+	u1:({das thema [ist lautet heißt]} _* ) $topic=$1 %evaluate
+			Du suchst nach dem Thema $topic . \pau=500\ ^rand["Stimmt das?" "Habe ich richtig gehört?" "Habe ich das richtig verstanden?"]
+			u2:(~ja) super. \pau=500\ Gib mir ne Sekunde zum Nachdenken. %search
+			u2:(~nein) Möchtest du mir das Thema buchstabieren?
+				u3:(~ja) %resetTopic
+					Okay, bitte sprich langsam. \pau=500\ Wenn ich einen Buchstaben falsch verstanden habe, sag \pau=300\ zurück \pau=300\ . Wenn du das Thema vollständig buchstabiert hast, sag \pau=300\ fertig \pau=300\. Also leg los!
+					u4:(a) a $letter=a %spellTopic ^stayInScope
+					u4:(b) b $letter=b %spellTopic ^stayInScope
+					u4:(c) c $letter=c %spellTopic ^stayInScope
+					u4:(d) d $letter=d %spellTopic ^stayInScope
+					u4:(e) e $letter=e %spellTopic ^stayInScope
+					u4:(f) f $letter=f %spellTopic ^stayInScope
+					u4:(g) g $letter=g %spellTopic ^stayInScope
+					u4:(h) h $letter=h %spellTopic ^stayInScope
+					u4:(i) i $letter=i %spellTopic ^stayInScope
+					u4:(j) j $letter=j %spellTopic ^stayInScope
+					u4:(k) k $letter=k %spellTopic ^stayInScope
+					u4:(l) l $letter=l %spellTopic ^stayInScope
+					u4:(m) m $letter=m %spellTopic ^stayInScope
+					u4:(n) n $letter=n %spellTopic ^stayInScope
+					u4:(o) o $letter=o %spellTopic ^stayInScope
+					u4:(p) p $letter=p %spellTopic ^stayInScope
+					u4:(q) q $letter=q %spellTopic ^stayInScope
+					u4:(r) r $letter=r %spellTopic ^stayInScope
+					u4:(s) s $letter=s %spellTopic ^stayInScope
+					u4:(t) t $letter=t %spellTopic ^stayInScope
+					u4:(u) u $letter=u %spellTopic ^stayInScope
+					u4:(v) v $letter=v %spellTopic ^stayInScope
+					u4:(w) w $letter=w %spellTopic ^stayInScope
+					u4:(x) x $letter=x %spellTopic ^stayInScope
+					u4:(y)  y $letter=y %spellTopic ^stayInScope
+					u4:(z) z $letter=z %spellTopic ^stayInScope
+					u4:(ä) ä $letter=ä %spellTopic ^stayInScope
+                                        u4:(ö) ö $letter=ö %spellTopic ^stayInScope
+                                        u4:(ü) ü $letter=ü %spellTopic ^stayInScope
+                                        u4:(ß) ß $letter=ß %spellTopic ^stayInScope
+					u4:(leerzeichen) $letter=space %spellTopic ^stayInScope
+					u4:(zurück) $letter=reset %spellTopic ^stayInScope
+					u4:(fertig) Super, danke! Ich bin dann mal Suchen! %search
+				
+				u3:(~nein) Okay, dann lass es uns nochmal anders versuchen. %resetTopic %goto_normalSearch
