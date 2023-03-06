@@ -1,0 +1,9 @@
+topic: ~concepts ()
+
+concept:(ja)[klar ja natürlich selbstverständlich "na klar" "{ja} hast du" "{das ist} richtig" stimmt genau "{ja} gerne" "sehr gerne" "ja bitte"]
+
+concept:(nein)["nein {leider nicht}" "{nein} das ist falsch" nö "{nein} habe ich {leider} nicht" "leider nicht" nö ne "nein tut mir leid" "weiß ich nicht" "kenne ich nicht" "grade nicht" "{danke} nein {danke}" "jetzt nicht" "auf {gar} keinen Fall" "lieber nicht" niemals "oh nein"]
+
+concept:(zurück)[zurück "geh zurück" "{zurück} zur übersicht"]
+
+concept:(zahl) [eins zwei drei vier fünf sechs sieben acht neun zehn]
