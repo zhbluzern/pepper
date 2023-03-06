@@ -1,0 +1,19 @@
+proposal: %default
+^first[" $resultCount==0 ^enableThenGoto(noResults)" "^enableThenGoto(presentResults)"]
+
+proposal: %presentResults
+\pau=900\
+^first[ " ^exist(intro-result) Hier sind meine Ergebnisse. \pau=500\ Wenn dich eines davon interessiert, nenne mir seine Nummer, \pau=300\ zum Beispiel eins, zwei oder drei! ^clear(intro-result) " "Schau mal, was ich gefunden habe! \pau=500\ Auf meinem Täbblet siehst du die besten Ergebnisse. \pau=500\ Wenn du dich für eines interessierst, zeige ich dir gerne mehr Details dazu! \pau=500\ Sag einfach Buch eins, zwei oder drei \pau=300\ oder frage mich nach weiteren Ergebnissen. $intro-result=1 "]
+u1:(~nein) Okay, dann zurück zur Startseite! %goto_selectPage
+u1:(~ja) Welches Buch interessiert dich? ^stayInScope
+u1:({zeig mir} [mehr weitere] Ergebnisse) Okay! %nextResults ^stayInScope
+u1:(["geh nochmal zurück" "{zeig mir} {nochmal} {die} [letzten letzten anderen vorigen vorherige] Ergebnisse {davor}"]) Okay! %prevResults ^stayInScope
+u1:(["Merkliste anzeigen" "geh zur merkliste" "zeig mir meine Merkliste"]) Okay! %goto_favoritesOverview
+u1:(_[~zahl]) $zahl=$1 Okay! %selectResult
+
+proposal: %noResults
+Ich habe leider keine Ergebnisse gefunden. \pau=500\ Möchtest du es mit einer anderen Suche versuchen? 
+u1:(~ja) Okay! %goto_selectPage
+u1:({starte} {bitte} {[eine die]} erweiterte Suche) Okay! %goto_customSearch
+u1:(~nein) Okay, dann zurück zur Startseite! %goto_selectPage
+u1:(["Merkliste anzeigen" "geh zur merkliste" "zeig mir meine Merkliste"]) Okay! %goto_favoritesOverview
