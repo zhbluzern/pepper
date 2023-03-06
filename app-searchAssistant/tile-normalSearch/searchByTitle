@@ -1,0 +1,50 @@
+proposal: %default
+\pau=800\
+^rand["Bitte nenne mir den Titel des Buches!" "Wie heißt denn das Buch, das du suchst?" "Wie lautet denn der Titel?"]
+	u1:(["Suche beenden" "{zurück} zur Übersicht" "beende die suche"])
+			^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+
+	u1:({geh} {nochmal} zurück {bitte}) %goto_normalSearch
+
+	u1:(["ich suche {gar} [nichts "kein Buch"]" "Ich [will möchte] {gerade} {[überhaupt gar]} kein Buch suchen"]) Oh, das hab ich dann wohl falsch verstanden. ^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+
+	u1:({das buch heißt} _* ) $title=$1 %evaluate
+		Du suchst nach dem Buch $title . \pau=500\ Stimmt das?
+		u2:(~ja) super. \pau=500\ Gib mir einen Moment zum Nachdenken. %search
+		u2:(~nein) Möchtest du mir den Titel buchstabieren? %resetTitle
+			u3:(~ja)
+				Okay, bitte sprich langsam. \pau=500\ Wenn ich einen Buchstaben falsch verstanden habe, sag \pau=300\ zurück \pau=300\ . Wenn du den Titel vollständig buchstabiert hast, sag \pau=300\ fertig \pau=300\. Also leg los!
+				u4:(a) a $letter=a %spellTitle ^stayInScope
+				u4:(b) b $letter=b %spellTitle ^stayInScope
+				u4:(c) c $letter=c %spellTitle ^stayInScope
+				u4:(d) d $letter=d %spellTitle ^stayInScope
+				u4:(e) e $letter=e %spellTitle ^stayInScope
+				u4:(f) f $letter=f %spellTitle ^stayInScope
+				u4:(g) g $letter=g %spellTitle ^stayInScope
+				u4:(h) h $letter=h %spellTitle ^stayInScope
+				u4:(i) i $letter=i %spellTitle ^stayInScope
+				u4:(j) j $letter=j %spellTitle ^stayInScope
+				u4:(k) k $letter=k %spellTitle ^stayInScope
+				u4:(l) l $letter=l %spellTitle ^stayInScope
+				u4:(m) m $letter=m %spellTitle ^stayInScope
+				u4:(n) n $letter=n %spellTitle ^stayInScope
+				u4:(o) o $letter=o %spellTitle ^stayInScope
+				u4:(p) p $letter=p %spellTitle ^stayInScope
+				u4:(q) q $letter=q %spellTitle ^stayInScope
+				u4:(r) r $letter=r %spellTitle ^stayInScope
+				u4:(s) s $letter=s %spellTitle ^stayInScope
+				u4:(t) t $letter=t %spellTitle ^stayInScope
+				u4:(u) u $letter=u %spellTitle ^stayInScope
+				u4:(v) v $letter=v %spellTitle ^stayInScope
+				u4:(w) w $letter=w %spellTitle ^stayInScope
+				u4:(x) x $letter=x %spellTitle ^stayInScope
+				u4:(y)  y $letter=y %spellTitle ^stayInScope
+				u4:(z) z $letter=z %spellTitle ^stayInScope
+									u4:(ä) ä $letter=ä %spellTitle ^stayInScope
+									u4:(ö) ö $letter=ö %spellTitle ^stayInScope
+									u4:(ü) ü $letter=ü %spellTitle ^stayInScope
+									u4:(ß) ß $letter=ß %spellTitle ^stayInScope
+				u4:(leerzeichen) $letter=space %spellTitle ^stayInScope
+				u4:(zurück) $letter=reset %spellTitle ^stayInScope
+				u4:(fertig) Super, danke! Ich bin dann mal Suchen! %search
+			u3:(~nein) Okay, dann lass uns nochmal anders versuchen. %resetTitle %goto_normalSearch
