@@ -1,0 +1,13 @@
+proposal: %default
+
+proposal: %presentResult
+^first ["Dieses Buch zum Thema $topic heißt $title \pau=300\ und wurde vom Autor $author verfasst." "Das Buch heißt $title \pau=300\ und wurde vom Autor $author verfasst." "Das ausgewählte Buch wurde vom Autor $author verfasst." "Der Titel dieses Buches ist $title" "Hier siehst du alles, was ich dazu gefunden habe." ]
+\pau=1800\
+^first["Hier ist auch noch ein kurzer Infotext dabei. \pau=500\ Pass auf! \pau=1500\ . $infotext " "Einen Infotext gibt es hier aber wohl leider nicht."]
+\pau=900\ Möchtest du das Buch auf deine Merkliste setzen?
+
+u1:(~nein) Okay, bleibe solange du möchtest. \pau=500\ Mit \pau=300\ zurück \pau=300\ kommst du auf die Übersichtsseite. \pau=500\ Wenn du \pau=300\ fertig \pau=300\ sagst, \pau=300\ beende ich deine Suche. ^stayInScope
+u1:([merken "auf die Merkliste {setzen}" "ich möchte mir das buch merken" ~ja]) Okay, ich setze das Buch auf die Merkliste! %setFavorite ^stayInScope
+u1:(["zeig mir [die meine] Merkliste" "{Geh} zur Merkliste" "Merkliste anzeigen"]) Gerne! %goto_favoritesOverview
+u1:([fertig beenden]) %goto_selectPage
+u1:(~zurück) %goto_resultOverview
