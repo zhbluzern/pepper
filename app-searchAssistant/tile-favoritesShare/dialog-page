@@ -1,0 +1,7 @@
+proposal: %default
+
+\pau=800\
+Hier ist deine mobiele Merkliste! \pau=500\ Schnapp dir einfach dein Smartphone und skänne den QR-Code \pau=300\ oder rufe den Link in deinem Browser auf. \pau=500\ Und schon kannst du deine Merkliste überall mit hin nehmen!
+
+u1:(~zurück) %goto_favoritesOverview
+u1:([fertig "danke {pepper}"]) Sehr gerne! %goto_selectPage
