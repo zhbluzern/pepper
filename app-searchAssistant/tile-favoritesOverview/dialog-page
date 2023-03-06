@@ -1,0 +1,7 @@
+proposal: %default
+
+Hier sind alle Bücher, die ich mir für dich gemerkt habe. \pau=500\ Du kannst deine Merkliste auch mitnehmen. \pau=500\ Dann generiere ich für dich einen ganz persönlichen QR-Code, unter dem du deine Merkliste von überall aus aufrufen kannst.
+
+u1:(danke {pepper}) Sehr gerne. \pau=4000\ %goto_selectPage
+u1:(~zurück) %goto_resultOverview
+u1:(["Merkliste [teilen mitnehmen]" teilen "ich [will würde möchte] meine Merkliste {gerne} [mitnehmen teilen]" "zeig mir den QR Code"]) Kommt sofort! %goto_favoritesShare
