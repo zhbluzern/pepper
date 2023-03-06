@@ -11,9 +11,9 @@ concept:(kennstdu) ["Kennst du" "Wer ist" "was weißt du über"]
 concept:(notebook)[notebooks ausleihnotebooks "{ein} notebook" "{ein} ausleihnotebook" "{einen} laptop" laptops "{einen} Computer"]
 
 concept:(robotname)[Pepper "kleiner Roboter" du Kleiner]
-concept:(ja) [ja "das ist richtig" "ja bitte" "sehr gerne" gerne "ja gerne" klar natürlich]
+concept:(ja) [klar ja natürlich selbstverständlich "na klar" "{ja} hast du" "{das ist} richtig" stimmt genau "{ja} gerne" "sehr gerne" "ja bitte"]
 
-concept:(nein) ["grade nicht" nein "nein danke" ne "danke nein" "jetzt nicht" "auf {gar} keinen Fall" "lieber nicht" niemals "oh nein"]
+concept:(nein) ["nein {leider nicht}" "{nein} das ist falsch" nö "{nein} habe ich {leider} nicht" "leider nicht" nö ne "nein tut mir leid" "weiß ich nicht" "kenne ich nicht" "grade nicht" "{danke} nein {danke}" "jetzt nicht" "auf {gar} keinen Fall" "lieber nicht" niemals "oh nein"]
 
 concept:(understood) ^rand["Natürlich gerne" "Klaro gerne" "ja sehr gerne" klar natürlich]
 
