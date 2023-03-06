@@ -1,0 +1,3 @@
+topic: ~basicchannel ()
+
+u:(["zeig mir meine merkliste" "Merkliste anzeigen" "ich möchte meine Merkliste sehen" "zur Merkliste !hinzufügen {bitte}"]) %goto_favoritesOverview
