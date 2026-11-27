@@ -1,7 +1,7 @@
 proposal: %default
 
-^first["^exist(intro) ^rand["Worüber darf ich dir jetzt erzählen?" "gibt es noch etwas, was du wissen möchtest?" "was interessiert dich noch?" "Hast du noch eine Frage?" "Möchtest du noch etwas wissen?"]"
-	"Hallo! \pau=300\ Schön, dass du mich besuchen kommst. \pau=300\ Ich heiße Lucy und beantworte nur zu gerne alle deine Fragen. \pau=300\ Was möchtest du wissen? $intro=1"]
+#^first["^exist(intro) ^rand["Worüber darf ich dir jetzt erzählen?" "gibt es noch etwas, was du wissen möchtest?" "was interessiert #dich noch?" "Hast du noch eine Frage?" "Möchtest du noch etwas wissen?"]"
+#	"Hallo! \pau=300\ Schön, dass du mich besuchen kommst. \pau=300\ Ich heiße Lucy und beantworte nur zu gerne alle deine Fragen. #\pau=300\ Was möchtest du wissen? $intro=1"]
 
 u:(Kannst Du [eine einen] [ghettofaust "ghetto faust" fistbamp])
 	Klar, mit oder ohne Explosion?
