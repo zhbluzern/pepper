@@ -6,7 +6,7 @@ proposal: %default
 	u1:(["Suche beenden" "{zurück} zur Übersicht" "beende die suche"]) Was immer du möchtest!
 			^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
 		
-	u1:({geh} {nochmal} zurück {bitte}) %goto_normalSearch
+		u1:({geh} {nochmal} zurück {bitte}) %goto_normalSearch
 
 	u1:(["ich suche {gar} [nichts "kein Buch"]" "Ich [will möchte] {gerade} {[überhaupt gar]} kein Buch suchen"]) Oh, das hab ich dann wohl falsch verstanden. ^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
 
@@ -51,3 +51,4 @@ proposal: %default
 					u4:(fertig) Super, danke! Ich bin dann mal Suchen! %search
 				
 				u3:(~nein) Okay, dann lass es uns nochmal anders versuchen. %resetTopic %goto_normalSearch
+
