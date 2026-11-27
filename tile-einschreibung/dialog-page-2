@@ -2,16 +2,13 @@ proposal: %default
 
 Super, dann folge mir bitte.
 
-^execute(gotoPOI,Neueinschreibung)
+^execute(gotoPOI,registrierung)
 
 proposal: %presentPOI
-	Hier sind wir!
-    
-Ich kann Dir Schritt für Schritt zeigen, wie die Einschreibung funktioniert. \pau=900\ Möchtest Du das?
-
-u:(ja)
+	Hier sind wir! \pau=500\ Ich könnte Dich nun Schritt für Schritt durch die Einschreibung führen. Möchtest Du das? 
+	u:(~ja)
 	%goto_bibliotheksanmeldung-3
 
-u:(nein)
-	Alles klar, dann sieh doch zu, wie Du allein klarkommst.
-    	%goto_home
+	u:(~nein)
+	Okay, dann lasse ich dich alleine weiter machen.
+    %goto_service
