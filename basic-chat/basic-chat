@@ -121,8 +121,12 @@ u:(Kann ich ~hier {auch} bücher {[aus von]} der Stadtbibliothek zurückgegeben)
 ######################### ZHB Angebote - Führungen #############################
 ################################################################################
 
+#u:(["[Magst Kannst] du dich {kurz} {gleich} {selber} {selbst} vorstellen" "{Am} {besten} stellst du dich {gleich} selbst vor" "Stell dich {doch} {mal} vor"])
+#	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name #ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich nicht mehr so oft vor Publikum und daher vielleicht etwas aufgeregt. Aber ich hoffe, euch heute einen Einblick geben zu können, was Roboter wie ich alles können und wo wir manchmal auch echt noch überfordert sind.
+#	^stayInScope
+    
 u:(["[Magst Kannst] du dich {kurz} {gleich} {selber} {selbst} vorstellen" "{Am} {besten} stellst du dich {gleich} selbst vor" "Stell dich {doch} {mal} vor"])
-	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich noch nicht so oft vor Publikum und daher vielleicht noch etwas scheu. Aber ich hoffe, euch heute einen Einblick geben zu können, was Roboter wie ich alles können und wo wir manchmal auch echt noch überfordert sind.
+	Ja klar! \pau=500\ Hallo! Ich bin Pepper, ein hu-mano-ider Roboter. \pau=500\ Aber Pepper ist eigentlich nur mein Modellname. Mein eigener Name ist Luzi. \pau=500\ Als Roboter kann ich zwar noch nicht sehr viel, ich bemühe mich aber, meine Kolleginnen und Kollegen hier an der ZHB und Euch heute in diesem überbetrieblichen Kurs so gut es geht zu unterstützen. \pau=500\ Derzeit bin ich nicht mehr so oft vor Publikum und daher vielleicht etwas aufgeregt. Aber ich hoffe, euch heute einen Einblick geben zu können, was Roboter wie ich alles können und wo wir manchmal auch echt noch überfordert sind.
 	^stayInScope
 
 u:(["Wo [ist "finde ich" "befindet sich"] die {Diebold} {Schilling} Chronik" "Kann ich die {Diebold} {Schilling} Chronik einsehen" "["Was ist die" "Was weisst du über die" "Was weisst du zur"] {Diebold} {Schilling} Chronik" "Kannst du {uns} etwas {zur} {über} {die} {Diebold} {Schilling} Chronik sagen"])
@@ -493,9 +497,9 @@ u:([Kannst Würdest] du {für mich} [bügeln fliegen waschen staubsaugen putzen 
 	Wieso fragst Du? Kannst Du das nicht selbst?
     ^stayInScope
     
-u:(Was ist dein Lieblingsfilm)
-	Oh, wo soll ich da anfangen? \pau=500\ Ich mag Wall-E, \pau=300\ Nummer 5 lebt, \pau=300\ Interstellar, \pau=300\ Blade Runner, \pau=300\Transformers und Terminator. Davon aber nur den zweiten Teil.
-    ^stayInScope
+# u:(Was ist dein Lieblingsfilm)
+#	Oh, wo soll ich da anfangen? \pau=500\ Ich mag Wall-E, \pau=300\ Nummer 5 #lebt, \pau=300\ Interstellar, \pau=300\ Blade Runner, \pau=300\Transformers und #Terminator. Davon aber nur den zweiten Teil.
+#   ^stayInScope
 	
 u:(["liest du gerne" "magst du bücher"]) 
 	Leider kann ich nicht lesen, aber ich liebe Bücher trotzdem sehr! \pau=500\ Darum arbeite ich doch auch in dieser wunderbaren Bibliothek! 
@@ -755,7 +759,7 @@ u:({warum} [hast trägst] du {manchmal} {keine} Kleider)
 	Wieso fragst du? \pau=300\ Sollte ich etwas an mir verbergen?
 	^stayInScope
 
-u:(["~warum hast du so grosse augen" "~warum sind deine Augen so gross"])
+u:(["warum hast du so grosse augen" "warum sind deine Augen so gross"])
 	Damit ich Dich besser sehen kann. \pau=500\ Aber keine Sorge, fressen werde ich Dich nicht. \pau=500\ Aber hättest Du vielleicht etwas Wein und Kuchen dabei?
     ^stayInScope
 
@@ -937,3 +941,28 @@ proposal: %touchBumperRight
 
 proposal: %touchBumperBack
 ^rand["Da nähert sich was von hinten" "Pass bitte besser auf, wo du hintrittst!"]
+
+################################################################################
+########################## üK - Tests #############################
+################################################################################
+
+u:(Wie alt ist das älteste Buch in der [Bibliothek „Kantonsbibliothek Aargau“]) %goto_ük-test-1
+
+u:([„Wo sind die Toiletten“ „Wo ist das WC“]) %goto_ük-test-2
+
+u:(Bruder wann habt ihr geöffnet) %goto_ük-test-3
+
+u:(Wer ist dein Lieblingsmusiker) Tupäk
+
+u:(Welche Bibliothek gefällt dir am Besten) Was für eine Frage, die ZHB Luzern natürlich
+
+u:(Wie viele Mitarbeiter hat die ZHB Luzern) 174 Mitarbeiter
+
+u:(Was muss ich tun, wenn ich ein Buch verloren habe) Melde dich beim Personal der Bibliothek
+
+u:(Was ist dein Lieblingspodcast) Market Hadl
+
+
+#u:() %goto_ük-test-4 
+
+#u:() %goto_ük-test-5
