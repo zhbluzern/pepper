@@ -1,5 +1,5 @@
 proposal: %default
-\pau=5000\
+\pau=500\
 ^first[ "^exist(suche) Möchtest du diesmal eine einfache oder eine erweiterte Suche starten?" "Alles klar, lass uns den Medien-Dschungel durchforsten! \pau=500\ Möchtest du eine einfache Suche starten oder eine erweiterte, ganz gezielte Suche? $suche=1 "]
 
 u1:(["was [heißt bedeutet "meinst du mit" "ist eine"] [erweiterte allgemeine schnelle gezielten] Suche" 
@@ -15,7 +15,7 @@ u1:(["{Ich möchte } {bitte} {[die eine]} ["einfache Suche" einfach schnell] {st
 	"{lieber} die einfache {suche} {bitte}"]) 
 	^rand["Schnell und einfach. \pau=500\ Los gehts!" 
 			"Hätte ich jetzt auch vorgeschlagen." 
-			"Schnell und einfach. \pau=500 So mag ich es." 
+			"Schnell und einfach. \pau=500\ Das mag ich." 
 			"Na dann hopp hopp!"] %goto_normalSearch
 
 u1:(["{Ich möchte } {bitte} {[die eine]} ["[erweiterte gründliche präzise] Suche" erweitert  präzise] {starten}" 
@@ -25,3 +25,7 @@ u1:(["{Ich möchte } {bitte} {[die eine]} ["[erweiterte gründliche präzise] Su
 
 u1:([~zurück "gar nicht" "ich [möchte wollte will] {gar} nichts suchen" "gar keine {suche}"]) 
 Ups, dann hab ich das wohl falsch verstanden. ^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
+
+
+
+
