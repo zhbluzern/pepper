@@ -1,9 +1,9 @@
 proposal: %default
 
-Die Neueinschreibung ist kostenlos. \pau=500\ Du benötigst eine E-Mail-Adresse, \pau=300\ Zugriff auf Deinen Posteingang \pau=300\ sowie eine Switsch-edu-Ei-Die. \pau=500\ Hast Du bereits eine Switsch-edu-Ei-Die?
+Die Neueinschreibung ist kostenlos. \pau=500\ Du benötigst eine E-Mail-Adresse, \pau=300\ Zugriff auf Deinen Posteingang zum Beispiel über Dein Smartphone oder einen Browser auf Deinem Notebook. \pau=300\ Hast Du weder ein Smartphone noch ein Notebook dabei, kannst Du auch unsere Registrierstation nutzen. \pau=300\ Bitte dafür einfach unsere Mitarbeitenden an der Theke um Hilfe, damit sie Dir die Station zeigen und anschalten. \pau=500\ Um anschliessend mit der Registrierung starten zu können, brauchst Du als erstes eine Switsch-edu-Ei-Die. \pau=500\ Hast Du bereits eine Switsch-edu-Ei-Die?
 
-u:(ja)
+u:(~ja)
 	%goto_bibliotheksanmeldung-6
 
-u:(nein)
+u:(~nein)
 	%goto_bibliotheksanmeldung-4
