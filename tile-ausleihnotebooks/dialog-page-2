@@ -2,8 +2,8 @@ proposal: %default
 
 Super, dann folge mir bitte.
 
-^execute(gotoPOI,Infotheke)
+^execute(gotoPOI,ausleihtheke)
 
 proposal: %presentPOI
-    Hier sind wir!
+	Hier sind wir! Bitte frage unser Personal nach einem Ausleihnotebook.
     %goto_service
