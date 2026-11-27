@@ -4,6 +4,7 @@ proposal: %default
 Lass uns loslegen. \pau=800\   ^enableThenGoto(titel)
 
 proposal: %titel ^rand["Möchtest du mir einen Titel nennen?" "Hast du einen Titel für mich?" "Kennst du den Namen des Buches?"]
+
 	u1:(~zurück) Okay. %goto_selectPage
 	u1:(~nein) Kein Problem, dann zur nächsten Frage. ^enableThenGoto(autor)
 	u1:(~ja) ^rand["Wie heißt denn das Buch?" "Bitte nenne mir den Titel des Buches!" "Wie ist denn der Name des Buches?" "nach welchem Titel suchst du?"]
@@ -52,6 +53,7 @@ proposal: %titel ^rand["Möchtest du mir einen Titel nennen?" "Hast du einen Tit
 					u5:([nutzen speichern "benutz ihn {trotzdem}"]) okay! weiter gehts. ^enableThenGoto(autor)
 					u5:(["nicht nutzen" verwerfen löschen]) wird gemacht! %resetTitle ^enableThenGoto(autor)
 					u5:(e:Dialog/NotUnderstood) Bitte antworte mit speichern oder verwerfen. ^stayInScope
+
 
 proposal: %autor Möchtest du nach einem bestimmten Autor oder einer bestimmten Autorin suchen?
 	u1:(e:Dialog/NotUnderstood) Bitte antworte mit ja oder nein. ^stayInScope
@@ -104,6 +106,7 @@ proposal: %autor Möchtest du nach einem bestimmten Autor oder einer bestimmten 
 					u5:(speichern) okay!  ^enableThenGoto(thema)
 					u5:(verwerfen) wird gemacht! %resetAuthor ^enableThenGoto(thema)
 
+
 proposal: %thema Suchst du auch nach einem bestimmten Thema?
 	u1:(e:Dialog/NotUnderstood) Bitte antworte erst mit ja oder nein. ^stayInScope
 	u1:([zurück "nochmal das letzte" "nochmal zum Autor"]) Okay. ^enableThenGoto(autor)
@@ -152,3 +155,5 @@ proposal: %thema Suchst du auch nach einem bestimmten Thema?
 					u5:(fertig) Super, danke! \pau=700\ Lass mich kurz überlegen. %search
 				
 				u4:(~nein) %resetTopic Okay, dann schauen wir uns mal die Auswertung an! \pau=500\ Lass mich einen Moment überlegen. %search
+
+
