@@ -1,7 +1,6 @@
 proposal: %default
 
-Suchst du nach einem Autor, \pau=300\ nach einem Titel \pau=300\ oder nach einem bestimmten Thema?
-
+Suchst du nach einem Autor, \pau=300\ nach einem Titel \pau=300\ oder nach einem bestimmten Thema? 
 	u1:({ich suche} {nach} {[ein einen einem]} {[bestimmtes bestimmten]} {buch} titel) Okay! %goto_searchByTitle
 		
 	u1:({ich suche} {nach} {[einen einem]} {bestimmten} autor) Alles klar! %goto_searchByAuthor
@@ -10,8 +9,10 @@ Suchst du nach einem Autor, \pau=300\ nach einem Titel \pau=300\ oder nach einem
 		
 	u1:({ich suche} ["gar nichts" nichts]) Ups, das hab ich dann wohl falsch verstanden. \pau=500\ Dann zurück zur Übersicht! %goto_home
 	
+	
 	u1:(["Suche beenden" "{zurück} zur Übersicht" schließen beenden "beende die suche"])
 			^execute(launchApp,cl9s.pepper.app.concierge:cmsAccount.zhb,language.de)
 		
 	u1:({geh} {nochmal} ~zurück {bitte}) %goto_selectPage
 	u1:(e:Dialog/NotUnderstood3) Tut mir leid, das habe ich nicht verstanden. \pau=500\ Suchst du nach einem Titel, einem Autor oder einem Thema? ^stayInScope
+
