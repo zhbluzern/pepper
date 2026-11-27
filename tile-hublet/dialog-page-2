@@ -2,8 +2,8 @@ proposal: %default
 
 Super, dann folge mir bitte.
 
-^execute(gotoPOI,Hublet)
+^execute(gotoPOI,hublet)
 
 proposal: %presentPOI
-	  Hier sind wir!
+	Hier sind wir!
     %goto_service
